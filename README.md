@@ -1,14 +1,14 @@
 <img src="public/images/thumbnail.png" style="border-radius:5px;" />
 
-<br/><br/>
+<br/>
 
-## About
+### About
 
 A simple portfolio website with a blog. made using next.js and css.
 
-<br/><br/>
+<br/>
 
-## Setup 🛠️
+### Setup 🛠️
 
 First, clone the repo
 
@@ -24,9 +24,9 @@ npm run dev
 
 Visit localhost:3000 to see the portfolio
 
-<br/><br/>
+<br/>
 
-## Resources 📚
+### Resources 📚
 
 The resources i used to create this project.
 
