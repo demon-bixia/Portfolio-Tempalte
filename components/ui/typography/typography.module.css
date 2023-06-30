@@ -1,0 +1,72 @@
+/***** Base Styles *****/
+.base {
+    margin: 0;
+}
+
+/***** Heading Styles *****/
+
+.heading_1 {
+    font: var(--heading-1);
+}
+
+.heading_2 {
+    font: var(--heading-2);
+}
+
+.heading_3 {
+    font: var(--heading-3);
+}
+
+.heading_4 {
+    font: var(--heading-4);
+}
+
+.heading_5 {
+    font: var(--heading-5);
+}
+
+.heading_6 {
+    font: var(--heading-6);
+}
+
+.heading_7 {
+    font: var(--heading-7);
+}
+
+
+/***** Body Styles *****/
+
+.body_1 {
+    font: var(--body-1);
+}
+
+.body_2 {
+    font: var(--body-2);
+}
+
+.body_3 {
+    font: var(--body-3);
+}
+
+.body_4 {
+    font: var(--body-4);
+}
+
+.body_5 {
+    font: var(--body-5);
+}
+
+
+/***** Display Styles *****/
+
+.display_1 {
+    font: var(--display-3);
+}
+
+.display_2 {
+    font: var(--display-2);
+}
+
+.display {
+    font: var(--display-3);
+}
