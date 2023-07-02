@@ -1,4 +1,4 @@
-<img src="public/images/thumbnail.png" style="border-radius:5px;" />
+<img src='public/images/thumbnail.png' style='border-radius:5px;' />
 
 <br/><br/>
 
@@ -31,6 +31,6 @@ Visit localhost:3000 to see the portfolio
 The resources i used to create this project.
 
 <ul>
-  <li><a href="http://ionicons.io/">ionicons</a></li>
-  <li><a href="https://www.figma.com/file/Q4H3VR29az91gSe05cfwUD/Portfolio?type=design&node-id=0-1&mode=design&t=1PGgKpzACp8RMsde-0">design system</a></li>
+  <li><a href='http://ionicons.io/'>ionicons</a></li>
+  <li><a href='https://www.figma.com/file/Q4H3VR29az91gSe05cfwUD/Portfolio?type=design&node-id=0-1&mode=design&t=1PGgKpzACp8RMsde-0'>design system</a></li>
 </ul>

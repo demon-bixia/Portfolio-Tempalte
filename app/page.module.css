@@ -1,3 +1,59 @@
+/***** Main Section *****/
+
 .main {
   padding: 32px;
+}
+
+
+/***** Blur Background *****/
+
+.blurBackground {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-image: url('../public/images/blur.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+/***** Hero Section *****/
+
+.hero {
+  height: calc(100vh - 147px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .welcome {
+  max-width: 568px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.hero .welcome h1 {
+  margin-bottom: 16px;
+}
+
+.hero .buttonGroup {
+  display: flex;
+}
+
+.hero .buttonGroup button {
+  min-width: 100px;
+}
+
+.hero .buttonGroup button:first-child {
+  margin-right: 12px;
+}
+
+.hero .buttonGroup button .openIcon svg {
+  width: 16px;
+  height: 16px;
 }

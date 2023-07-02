@@ -1,38 +1,62 @@
-import styles from "./button.module.css";
-import Typography, { TTypographyVariants } from "@/components/ui/typography/typography";
+import type { TTypographyVariants } from '@/components/ui/typography/typography';
+import { chooseTypography } from '@/components/ui/typography/typography';
+import styles from './button.module.css';
 
 
-// **** Components **** //
+// **** Types **** //
 
-export default function Button({
-  variant = "contained",
-  color = "primary",
-  typography = "heading-7",
-  children,
-}: {
-  variant?: "contained" | "outlined";
-  color?: "primary" | "secondary" | "gray";
+interface IProps {
+  variant?: 'contained' | 'outlined' | 'ghost';
+  color?: 'primary' | 'secondary' | 'gray';
   typography?: TTypographyVariants;
+  className?: string;
+  id?: string;
+  endAdornment?: React.ReactNode;
+  onClick?: (event: React.MouseEvent<any>) => any;
   children: React.ReactNode;
-}) {
-  const colorStyles = {
-    primary: styles.primary,
-    secondary: styles.secondary,
-    gray: styles.gray,
-  };
-  const variantStyles = {
-    contained: styles.contained,
-    outlined: styles.outlined,
-  };
+}
+
+
+// **** Variables **** //
+
+const colorStyles = {
+  primary: styles.primary,
+  secondary: styles.secondary,
+  gray: styles.gray,
+};
+
+const variantStyles = {
+  contained: styles.contained,
+  outlined: styles.outlined,
+  ghost: styles.ghost,
+};
+
+
+// **** Component **** //
+
+const Button = ({
+  variant = 'contained',
+  color = 'primary',
+  typography = 'heading-7',
+  className,
+  endAdornment,
+  children,
+  ...props
+}: IProps) => {
+  const [typeStyle] = chooseTypography(typography);
 
   return (
     <button
-      className={
-        styles.base + " " + colorStyles[color] + " " + variantStyles[variant]
-      }
+      className={`${styles.button} ${typeStyle} ${colorStyles[color]} ${variantStyles[variant]} ${className}`}
+      {...props}
     >
-      <Typography variant={typography}> {children} </Typography>
-      <span className={styles.endAdornment}></span>
+      {children}
+      {endAdornment ? <span className={styles.endAdornmentContainer}>{endAdornment}</span> : null}
     </button>
   );
-}
+};
+
+
+// **** Default export **** //
+
+export default Button;

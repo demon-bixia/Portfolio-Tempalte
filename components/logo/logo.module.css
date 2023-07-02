@@ -1,0 +1,13 @@
+.container {
+  width: 51px;
+  height: 29px;
+}
+
+.hideSkip {
+  position: absolute;
+  right: 10000px;
+}
+
+.hideLogo {
+  display: none;
+}
