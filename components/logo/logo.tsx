@@ -16,18 +16,18 @@ const Logo = () => {
   return (
     <div className={styles.container}>
       <Link
-        href="#mainContent"
+        href='#mainContent'
         className={skipLinkFocused ? '' : styles.hideSkip}
         onBlur={() => { setSkipLinkFocused(false) }}
         onFocus={() => { setSkipLinkFocused(true) }}
-        aria-label="skip to main content"
+        aria-label='skip to main content'
       >
         <IonIcon name='play-forward-outline' />
       </Link>
 
       <Link
         className={skipLinkFocused ? styles.hideLogo : ''}
-        aria-label="home"
+        aria-label='home'
       >
         <Image src={MSLogo} alt='MS Logo' />
       </Link>

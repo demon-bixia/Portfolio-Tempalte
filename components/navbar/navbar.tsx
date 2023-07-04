@@ -1,7 +1,7 @@
 'use client'
 
 
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
 import Button from '@/components/ui/button/button';
 import Link from '@/components/ui/link/link';
@@ -43,17 +43,17 @@ const Navbar = () => {
       <Logo />
 
       <div
-        id="linksWrapper"
+        id='linksWrapper'
         ref={linksWrapperElement}
         className={`${styles.linksWrapper} ${styles.disabled}`}
-        aria-labelledby="openNavigationButton"
-        role="menu">
+        aria-labelledby='openNavigationButton'
+        role='menu'>
         <Button
           onClick={closeMenu}
           className={styles.closeButton}
-          variant="ghost"
-          color="gray"
-          aria-label="close navigation menu"
+          variant='ghost'
+          color='gray'
+          aria-label='close navigation menu'
         >
           <IonIcon name='close-outline' className={styles.menuIcon} size='large' />
         </Button>
@@ -74,12 +74,12 @@ const Navbar = () => {
         </Button>
 
         <Button
-          onClick={openMenu} id="openNavigationButton"
+          onClick={openMenu} id='openNavigationButton'
           className={styles.openButton}
-          variant="ghost"
-          color="gray"
-          aria-label="open navigation menu"
-          aria-controls="linksWrapper"
+          variant='ghost'
+          color='gray'
+          aria-label='open navigation menu'
+          aria-controls='linksWrapper'
           aria-expanded={navigationState}
         >
           <IonIcon name='menu-outline' className={styles.menuIcon} size='large' />

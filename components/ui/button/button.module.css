@@ -15,7 +15,7 @@
 /***** Contained *****/
 
 .contained {
-    transition: border-color 400ms, background-color 400ms, box-shadow 300ms;
+    transition: border-color 400ms, background-color 400ms, box-shadow 400ms;
     color: var(--white);
 }
 

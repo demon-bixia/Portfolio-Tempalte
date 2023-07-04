@@ -24,6 +24,7 @@ export type TTypographyVariants =
 interface IProps {
   variant?: TTypographyVariants;
   children: React.ReactNode;
+  className?: string;
 };
 
 
@@ -64,13 +65,16 @@ export const chooseTypography = (variant: TTypographyVariants) => {
 const Typography = ({
   variant = 'body-1',
   children,
+  className,
+  ...props
 }: IProps) => {
   const [style, elementName] = chooseTypography(variant);
 
   const element = React.createElement(
     elementName,
     {
-      className: styles.base + ' ' + style
+      className: `${styles.base} ${style} ${className}`,
+      ...props
     },
     children
   );
