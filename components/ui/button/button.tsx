@@ -7,11 +7,12 @@ import styles from './button.module.css';
 
 interface IProps {
   variant?: 'contained' | 'outlined' | 'ghost';
-  color?: 'primary' | 'secondary' | 'gray';
+  color?: 'primary' | 'secondary' | 'gray' | 'white';
   typography?: TTypographyVariants;
   className?: string;
   id?: string;
   endAdornment?: React.ReactNode;
+  type?: "button" | "submit" | "reset";
   onClick?: (event: React.MouseEvent<any>) => any;
   children: React.ReactNode;
 }
@@ -23,6 +24,7 @@ const colorStyles = {
   primary: styles.primary,
   secondary: styles.secondary,
   gray: styles.gray,
+  white: styles.white,
 };
 
 const variantStyles = {
@@ -41,6 +43,7 @@ const Button = ({
   className,
   endAdornment,
   children,
+  type = 'button',
   ...props
 }: IProps) => {
   const [typeStyle] = chooseTypography(typography);
@@ -48,6 +51,7 @@ const Button = ({
   return (
     <button
       className={`${styles.button} ${typeStyle} ${colorStyles[color]} ${variantStyles[variant]} ${className}`}
+      type={type}
       {...props}
     >
       {children}

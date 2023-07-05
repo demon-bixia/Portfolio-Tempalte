@@ -1,0 +1,153 @@
+.projects {
+  padding: 100px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.projects .outerGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  column-gap: 60px;
+  row-gap: 60px;
+  margin-bottom: 24px;
+}
+
+.projects .outerGrid .description {
+  max-width: 170px;
+}
+
+.projects .outerGrid .descriptionWrapper .description .header {
+  margin-bottom: 16px;
+}
+
+.projects .outerGrid .descriptionWrapper .description .text {
+  margin-bottom: 24px;
+}
+
+.projects .outerGrid .descriptionWrapper .underline {
+  width: 105px;
+  height: 1px;
+  background-color: var(--blue-200);
+}
+
+.projects .outerGrid .innerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 24px;
+  column-gap: 24px;
+}
+
+.projects .outerGrid .innerGrid .item {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.projects .outerGrid .innerGrid .item .thumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.projects .outerGrid .innerGrid .item .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  place-items: center;
+  place-content: center;
+  background-color: var(--overlay);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1ms, opacity 800ms;
+}
+
+.projects .outerGrid .innerGrid .item:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.projects .outerGrid .innerGrid .item .overlay button {
+  max-width: 150px;
+  border-radius: 20px;
+}
+
+.projects .outerGrid .innerGrid .item .overlay button {
+  min-width: 150px;
+  border-radius: 20px;
+}
+
+.projects .outerGrid .innerGrid .item .overlay .demoButton {
+  margin-bottom: 12px;
+}
+
+.projects .outerGrid .innerGrid .item .overlay .icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.projects .seeMoreButtonWrapper {
+  display: grid;
+  place-items: end;
+}
+
+.projects .seeMoreButtonWrapper button .icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+/***** Tablet *****/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .projects .outerGrid {
+    grid-template-columns: 150px 1fr;
+  }
+
+  .projects .outerGrid .innerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/***** Mobile *****/
+
+@media only screen and (max-width: 767px) {
+  .projects .outerGrid {
+    grid-template-columns: repeat(1, 1fr);
+    place-content: center;
+    row-gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .projects .outerGrid .descriptionWrapper {
+    display: grid;
+    place-items: center;
+  }
+
+  .projects .outerGrid .descriptionWrapper .underline {
+    width: 50px;
+  }
+
+  .projects .outerGrid .description {
+    text-align: center;
+  }
+
+  .projects .outerGrid .innerGrid {
+    grid-template-columns: repeat(1, auto);
+    row-gap: 60px;
+  }
+
+  .projects .outerGrid .innerGrid .item {
+    height: 240px;
+  }
+
+  .projects .seeMoreButtonWrapper {
+    place-content: center;
+  }
+}

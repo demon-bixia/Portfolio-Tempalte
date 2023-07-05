@@ -25,6 +25,7 @@
   --black: #000000;
   --transparent: rgba(0, 0, 0, 0);
   --border: rgba(0, 0, 0, 0.03);
+  --overlay: rgba(0, 0, 0, 0.4);
 
   /* Types */
 

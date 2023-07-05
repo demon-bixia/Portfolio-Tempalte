@@ -1,6 +1,9 @@
-import styles from './page.module.css';
-import Skills from '@/components/skills/skills';
 import Hero from '@/components/hero/hero';
+import Skills from '@/components/skills/skills';
+import Projects from '@/components/projects/projects';
+import styles from './page.module.css';
+
+import projectsData from '@/data/projects';
 
 
 // **** Component **** //
@@ -16,6 +19,12 @@ export const Home = () => {
 
       {/* Skills Section */}
       <Skills />
+
+      {/* Projects Section */}
+      <Projects data={projectsData.development} />
+
+      {/* Designs Section */}
+      <Projects data={projectsData.designs} />
     </main >
   );
 };
