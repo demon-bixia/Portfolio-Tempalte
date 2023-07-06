@@ -23,7 +23,7 @@ export type TTypographyVariants =
 
 interface IProps {
   variant?: TTypographyVariants;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 };
 

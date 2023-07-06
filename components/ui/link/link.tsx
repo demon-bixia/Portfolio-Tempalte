@@ -8,8 +8,9 @@ import styles from './link.module.css';
 interface IProps {
   href?: string;
   typography?: TTypographyVariants,
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
+  target?: string;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLAnchorElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLAnchorElement>) => void;

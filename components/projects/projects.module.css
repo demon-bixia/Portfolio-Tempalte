@@ -72,12 +72,9 @@
   opacity: 1;
 }
 
-.projects .outerGrid .innerGrid .item .overlay button {
+.projects .outerGrid .innerGrid .item .overlay .demoButton,
+.projectButton {
   max-width: 150px;
-  border-radius: 20px;
-}
-
-.projects .outerGrid .innerGrid .item .overlay button {
   min-width: 150px;
   border-radius: 20px;
 }
@@ -96,9 +93,17 @@
   place-items: end;
 }
 
-.projects .seeMoreButtonWrapper button .icon svg {
+.projects .seeMoreButtonWrapper .icon {
+  margin-left: 12px;
+}
+
+.projects .seeMoreButtonWrapper .icon svg {
   width: 16px;
   height: 16px;
+}
+
+.projects .seeMoreButtonWrapper .seeMoreButton {
+  min-width: 180px;
 }
 
 

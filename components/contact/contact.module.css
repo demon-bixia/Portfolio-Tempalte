@@ -1,0 +1,84 @@
+.grid {
+  padding: 100px 32px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  column-gap: 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.grid .description {
+  max-width: 170px;
+}
+
+.grid .descriptionWrapper .description .header {
+  margin-bottom: 16px;
+}
+
+.grid .descriptionWrapper .description .text {
+  margin-bottom: 24px;
+}
+
+.grid .descriptionWrapper .underline {
+  width: 105px;
+  height: 1px;
+  background-color: var(--blue-200);
+}
+
+.grid .contactForm {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+}
+
+.grid .contactForm .sendButtonWrapper {
+  display: grid;
+  place-content: end;
+}
+
+.grid .contactForm .sendButtonWrapper .sendButton {
+  min-width: 180px;
+}
+
+.grid .contactForm .sendButtonWrapper .sendButton .icon {
+  margin-left: 12px;
+}
+
+.grid .contactForm .sendButtonWrapper .sendButton .icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+/***** Tablet *****/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .grid {
+    grid-template-columns: 150px 1fr;
+  }
+}
+
+
+/***** Mobile *****/
+
+@media only screen and (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    place-content: center;
+    row-gap: 60px;
+  }
+
+  .grid .descriptionWrapper {
+    display: grid;
+    place-items: center;
+  }
+
+  .grid .descriptionWrapper .underline {
+    width: 50px;
+  }
+
+  .grid .description {
+    text-align: center;
+  }
+}
