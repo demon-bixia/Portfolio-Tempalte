@@ -1,11 +1,10 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react';
 
-import { useRef, useState } from 'react';
-
+import Logo from '@/components/logo/logo';
 import Button from '@/components/ui/button/button';
 import Link from '@/components/ui/link/link';
-import Logo from '@/components/logo/logo';
 import IonIcon from '@reacticons/ionicons';
 
 import styles from './navbar.module.css';
@@ -14,32 +13,79 @@ import styles from './navbar.module.css';
 // **** Component **** //
 
 const Navbar = () => {
+  const navElement = useRef<HTMLElement>(null);
   const linksWrapperElement = useRef<HTMLDivElement>(null);
   const [navigationState, setNavigationState] = useState(false);
 
+  /**
+   * open the navigation menu with scale-up animation.
+   */
   const openMenu = () => {
     if (linksWrapperElement.current !== null) {
+      // prevent scrolling when the navigation is opened.
+      document.body.style.overflow = 'hidden';
       setNavigationState(true);
       linksWrapperElement.current.classList.remove(styles.disabled, styles.scaleClose);
       linksWrapperElement.current.classList.add(styles.scaleOpen);
     }
-  }
+  };
 
+  /**
+   * close the navigation menu with scale-down animation.
+   */
   const closeMenu = () => {
     if (linksWrapperElement.current !== null) {
+      // allow scrolling when the navigation is closed
+      document.body.style.overflow = 'visible';
       setNavigationState(false);
       linksWrapperElement.current.classList.remove(styles.active, styles.scaleOpen);
       linksWrapperElement.current.classList.add(styles.scaleClose);
+
+      // give it some time before closing so the animation can finish
       setTimeout(() => {
         linksWrapperElement.current
           ? linksWrapperElement.current.classList.add(styles.disabled)
           : {}
       }, 100);
     }
-  }
+  };
+
+  /**
+   * hide element when the user scrolls down,
+   * and show it when the user scrolls up.
+   */
+  useEffect(() => {
+    let previousScrollPosition = 0;
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      if (navElement.current) {
+        if (scrollPosition > window.innerHeight) {
+          navElement.current?.classList.add(styles.fixed);
+        } else {
+          navElement.current?.classList.remove(styles.fixed);
+        }
+
+        if (previousScrollPosition > scrollPosition) {
+          navElement.current?.classList.remove(styles.hide);
+        } else {
+          navElement.current?.classList.add(styles.hide);
+        }
+      }
+
+      previousScrollPosition = scrollPosition;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} ref={navElement}>
       <Logo />
 
       <div
@@ -59,17 +105,17 @@ const Navbar = () => {
         </Button>
 
         <ul className={styles.links}>
-          <li className={styles.link}><Link typography='body-2'>About</Link></li>
-          <li className={styles.link}><Link typography='body-2'>Skills</Link></li>
-          <li className={styles.link}><Link typography='body-2'>Projects</Link></li>
-          <li className={styles.link}><Link typography='body-2'>Designs</Link></li>
-          <li className={styles.link}><Link typography='body-2'>Blog</Link></li>
-          <li className={styles.link}><Link typography='body-2'>Contact Me</Link></li>
+          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#hero'>About</Link></li>
+          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#skills'>Skills</Link></li>
+          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#projects'>Projects</Link></li>
+          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#designs'>Designs</Link></li>
+          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#'>Blog</Link></li>
+          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#contact'>Contact Me</Link></li>
         </ul>
       </div>
 
       <div>
-        <Button className={styles.contactButton} variant='outlined' color='gray'>
+        <Button className={styles.contactButton} variant='outlined' color='gray' href="#contact">
           Contact Me
         </Button>
 

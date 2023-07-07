@@ -8,7 +8,7 @@ import IonIcon from '@reacticons/ionicons';
 
 const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <div className={styles.welcome}>
         <Typography variant='display-1'>Hi! I Am Muhammad Salah</Typography>
         <Typography variant='body-2'>As a full-stack web developer and designer, I create beautiful and functional websites. My skills in front-end and back-end development allow me to build custom solutions for my clients.</Typography>

@@ -4,7 +4,7 @@ import Link from '@/components/ui/link/link';
 import IonIcon from '@reacticons/ionicons';
 import Image from 'next/image';
 
-import MSLogo from '@/public/vectors/logo.svg';
+import MyLogo from '@/public/vectors/logo.svg';
 import styles from './logo.module.css';
 
 
@@ -29,7 +29,7 @@ const Logo = () => {
         className={skipLinkFocused ? styles.hideLogo : ''}
         aria-label='home'
       >
-        <Image src={MSLogo} alt='MS Logo' />
+        <Image src={MyLogo} alt='MS Logo' />
       </Link>
     </div>
   );

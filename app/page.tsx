@@ -1,12 +1,12 @@
+import footerData from '@/data/footer';
 import projectsData from '@/data/projects';
 import skillsData from '@/data/skills';
-import footerData from '@/data/footer';
 
 import Contact from '@/components/contact/contact';
+import Footer from '@/components/footer/footer';
 import Hero from '@/components/hero/hero';
 import Projects from '@/components/projects/projects';
 import Skills from '@/components/skills/skills';
-import Footer from '@/components/footer/footer';
 
 import styles from './page.module.css';
 
@@ -26,10 +26,10 @@ export const Home = () => {
       <Skills data={skillsData} />
 
       {/* Projects Section */}
-      <Projects data={projectsData.development} />
+      <Projects id='projects' data={projectsData.development} />
 
       {/* Designs Section */}
-      <Projects data={projectsData.designs} />
+      <Projects id='designs' data={projectsData.designs} />
 
       {/* Contact Section */}
       <Contact />

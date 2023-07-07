@@ -27,7 +27,7 @@
 }
 
 .footer .socialLinks .item .socialLink .icon {
-  color: var(--black);
+  color: var(--gray-700);
 }
 
 .footer .socialLinks .item .socialLink .icon svg {

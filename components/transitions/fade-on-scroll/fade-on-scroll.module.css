@@ -1,0 +1,9 @@
+.element {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+.element.active {
+  opacity: 1;
+}

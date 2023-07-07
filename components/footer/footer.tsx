@@ -5,7 +5,7 @@ import Typography from '@/components/ui/typography/typography';
 import IonIcon from '@reacticons/ionicons';
 import Image from 'next/image';
 
-import MSLogo from '@/public/vectors/logo.svg';
+import MyLogo from '@/public/vectors/logo.svg';
 import styles from './footer.module.css';
 
 
@@ -27,10 +27,10 @@ interface IProps {
 
 const Footer = ({ data }: IProps) => {
   return (
-    <footer className={styles.footer}>
+    <footer id="footer" className={styles.footer}>
       <div className={styles.grid}>
         <div>
-          <Image className={styles.logo} src={MSLogo} alt='MS Logo' />
+          <Image className={styles.logo} src={MyLogo} alt='MS Logo' />
         </div>
 
         <div>
@@ -38,8 +38,8 @@ const Footer = ({ data }: IProps) => {
         </div>
 
         <ul className={styles.socialLinks}>
-          {data.socialLinks.map(socialLink => (
-            <li className={styles.item}>
+          {data.socialLinks.map((socialLink, index) => (
+            <li className={styles.item} key={index}>
               <Link className={styles.socialLink} href={socialLink.url} target="_blank">
                 <IonIcon className={styles.icon} name={socialLink.socialLinkIcon} />
               </Link>

@@ -1,10 +1,10 @@
-import MSLogo from '@/public/vectors/logo.svg';
+import MyLogo from '@/public/vectors/logo.svg';
 
 
 // **** Variables **** //
 
 const footer = {
-  logo: MSLogo,
+  logo: MyLogo,
   copyright: '© 2023 demon-bixia. All rights reserved.',
   socialLinks: [
     {
