@@ -1,28 +1,33 @@
-import styles from './hero.module.css';
-import Button from '@/components/ui/button/button';
+import type { TTypographyVariants } from '@/components/ui/typography/typography';
 import Typography from '@/components/ui/typography/typography';
-import IonIcon from '@reacticons/ionicons';
+import styles from './hero.module.css';
+
+
+// **** Types **** //
+
+interface IProps {
+  data: {
+    title: string;
+    description: string;
+    textMaxWidth: string;
+    titleFont: TTypographyVariants;
+    descriptionFont: TTypographyVariants;
+  }
+  children: React.ReactNode;
+}
 
 
 // **** Component **** //
 
-const Hero = () => {
+const Hero = ({ data, children }: IProps) => {
   return (
-    <section id="hero" className={styles.hero}>
-      <div className={styles.welcome}>
-        <Typography variant='display-1'>Hi! I Am Muhammad Salah</Typography>
-        <Typography variant='body-2'>As a full-stack web developer and designer, I create beautiful and functional websites. My skills in front-end and back-end development allow me to build custom solutions for my clients.</Typography>
+    <section id='hero' className={styles.hero}>
+      <div className={styles.welcome} style={{ maxWidth: data.textMaxWidth }}>
+        <Typography variant={data.titleFont}>{data.title}</Typography>
+        <Typography variant={data.descriptionFont}>{data.description}</Typography>
       </div>
-      <div className={styles.buttonGroup}>
-        <Button aria-label='Hire me'>Hire Me</Button>
-        <Button
-          aria-label='See my projects'
-          variant='ghost'
-          endAdornment={<IonIcon name='open-outline' className={styles.openIcon} />}
-        >
-          Projects
-        </Button>
-      </div>
+
+      {children}
     </section>
   );
 };

@@ -13,7 +13,7 @@ import styles from './contact.module.css';
 export const Contact = () => {
   return (
     <FadeOnScroll>
-      <section id="contact" className={styles.contact}>
+      <section id='contact' className={styles.contact}>
         <div className={styles.grid}>
           <div className={styles.descriptionWrapper}>
             <div className={styles.description}>

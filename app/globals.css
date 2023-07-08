@@ -24,9 +24,13 @@
 
   --white: #FFFFFF;
   --black: #000000;
+
   --transparent: rgba(0, 0, 0, 0);
   --border: rgba(0, 0, 0, 0.03);
   --overlay: rgba(0, 0, 0, 0.4);
+  --card-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  --overlay-text: rgba(255, 255, 255, 0.9);
+
 
   /* Types */
 
@@ -45,8 +49,8 @@
   --body-5: 400 10px/13px 'Noto Sans', sans-serif;
 
   --display-1: 900 45px/61px 'Noto Sans', sans-serif;
-  --display-3: 900 40px/54px 'Noto Sans', sans-serif;
-  --display-2: 900 20px/27px 'Noto Sans', sans-serif;
+  --display-2: 900 30px/40px 'Noto Sans', sans-serif;
+  --display-3: 900 20px/27px 'Noto Sans', sans-serif;
 }
 
 body {

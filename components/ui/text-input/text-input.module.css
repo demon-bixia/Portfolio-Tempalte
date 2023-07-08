@@ -4,12 +4,18 @@
   row-gap: 12px;
 }
 
-.label {
+.formControl .label {
   font: var(--body-2);
 }
 
-.input {
+.formControl .inputWrapper {
+  position: relative;
+}
+
+.formControl .inputWrapper .input {
+  width: 100%;
   padding: 14px 12px;
+  box-sizing: border-box;
   border: 1px solid var(--border);
   border-radius: 5px;
   background-color: var(--gray-50);
@@ -17,18 +23,26 @@
   transition: border-color 400ms, background-color 400ms;
 }
 
-.input:hover {
+.formControl .inputWrapper .input:hover {
   border-color: var(--gray-300);
 }
 
-.input:focus {
+.formControl .inputWrapper .input:focus {
   outline: none;
   background-color: var(--transparent);
   border-color: var(--blue-300);
 }
 
-.input.multiline {
+.formControl .inputWrapper .input.multiline {
   min-height: 200px;
   max-height: 400px;
   resize: vertical;
+}
+
+.formControl .endAdornmentContainer {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 12px;
 }

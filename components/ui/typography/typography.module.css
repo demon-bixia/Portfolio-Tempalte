@@ -60,13 +60,13 @@
 /***** Display Styles *****/
 
 .display_1 {
-    font: var(--display-3);
+    font: var(--display-1);
 }
 
 .display_2 {
     font: var(--display-2);
 }
 
-.display {
+.display_3 {
     font: var(--display-3);
 }

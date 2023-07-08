@@ -1,7 +1,9 @@
 /***** Base Button Styles *****/
 
 .button {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, auto));
+
     justify-content: center;
     align-items: center;
     padding: 12px;

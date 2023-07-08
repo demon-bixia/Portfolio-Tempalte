@@ -13,9 +13,10 @@ interface IProps {
   endAdornment?: React.ReactNode;
   className?: string;
   id?: string;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   href?: string;
   target?: string;
+  disabled?: boolean;
   onClick?: (event: React.MouseEvent<any>) => any;
   children?: React.ReactNode;
 }

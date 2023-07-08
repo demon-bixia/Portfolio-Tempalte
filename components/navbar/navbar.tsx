@@ -115,7 +115,7 @@ const Navbar = () => {
       </div>
 
       <div>
-        <Button className={styles.contactButton} variant='outlined' color='gray' href="#contact">
+        <Button className={styles.contactButton} variant='outlined' color='gray' href='#contact'>
           Contact Me
         </Button>
 

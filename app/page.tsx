@@ -1,12 +1,12 @@
-import footerData from '@/data/footer';
 import projectsData from '@/data/projects';
 import skillsData from '@/data/skills';
+import heroData from '@/data/hero';
 
 import Contact from '@/components/contact/contact';
-import Footer from '@/components/footer/footer';
 import Hero from '@/components/hero/hero';
 import Projects from '@/components/projects/projects';
 import Skills from '@/components/skills/skills';
+import HireMe from '@/components/hire-me/hire-me';
 
 import styles from './page.module.css';
 
@@ -20,7 +20,9 @@ export const Home = () => {
       <div className={styles.blurBackground}></div>
 
       {/* Hero Section */}
-      <Hero />
+      <Hero data={heroData.portfolio}>
+        <HireMe />
+      </Hero>
 
       {/* Skills Section */}
       <Skills data={skillsData} />
@@ -34,8 +36,6 @@ export const Home = () => {
       {/* Contact Section */}
       <Contact />
 
-      {/* Footer Section */}
-      <Footer data={footerData} />
     </main >
   );
 };

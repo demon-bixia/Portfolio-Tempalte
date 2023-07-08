@@ -1,35 +1,17 @@
 .hero {
   padding: 50px 32px;
   height: calc(100vh - 183px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  place-items: center;
+  place-content: center;
 }
 
 .hero .welcome {
-  max-width: 568px;
   margin-bottom: 32px;
   text-align: center;
 }
 
 .hero .welcome h1 {
   margin-bottom: 16px;
-}
-
-.hero .buttonGroup {
-  display: flex;
-}
-
-.hero .buttonGroup button {
-  min-width: 100px;
-}
-
-.hero .buttonGroup button:first-child {
-  margin-right: 12px;
-}
-
-.hero .buttonGroup button .openIcon svg {
-  width: 16px;
-  height: 16px;
 }

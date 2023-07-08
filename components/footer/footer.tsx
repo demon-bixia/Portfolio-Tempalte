@@ -27,7 +27,7 @@ interface IProps {
 
 const Footer = ({ data }: IProps) => {
   return (
-    <footer id="footer" className={styles.footer}>
+    <footer id='footer' className={styles.footer}>
       <div className={styles.grid}>
         <div>
           <Image className={styles.logo} src={MyLogo} alt='MS Logo' />
@@ -40,7 +40,7 @@ const Footer = ({ data }: IProps) => {
         <ul className={styles.socialLinks}>
           {data.socialLinks.map((socialLink, index) => (
             <li className={styles.item} key={index}>
-              <Link className={styles.socialLink} href={socialLink.url} target="_blank">
+              <Link className={styles.socialLink} href={socialLink.url} target='_blank'>
                 <IonIcon className={styles.icon} name={socialLink.socialLinkIcon} />
               </Link>
             </li>

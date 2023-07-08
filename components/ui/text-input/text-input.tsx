@@ -5,18 +5,19 @@ import React from 'react';
 // **** IProps **** //
 
 interface IProps {
-  id: string;
+  id?: string;
   className?: string;
   type?: 'text' | 'password';
-  label: string;
+  label?: string;
   placeholder?: string;
   multiline?: boolean;
+  endAdornment?: React.ReactNode;
 }
 
 
 // **** Component **** //
 
-export const TextInput = ({ id, label, className, type = 'text', multiline = false, ...props }: IProps) => {
+export const TextInput = ({ id, label, className, endAdornment, type = 'text', multiline = false, ...props }: IProps) => {
   const elementName = multiline ? 'textarea' : 'input';
 
   const element = React.createElement(elementName, {
@@ -28,10 +29,15 @@ export const TextInput = ({ id, label, className, type = 'text', multiline = fal
 
   return (
     <div className={styles.formControl}>
-      <label className={styles.label} htmlFor={id}>
-        {label}
-      </label>
-      {element}
+      {
+        label
+          ? (<label className={styles.label} htmlFor={id}>{label}</label>)
+          : null
+      }
+      <div className={styles.inputWrapper}>
+        {element}
+        {endAdornment ? (<span className={styles.endAdornmentContainer}>{endAdornment}</span>) : null}
+      </div>
     </div>
   );
 };

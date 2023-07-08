@@ -24,7 +24,7 @@ interface IProps {
 const Skills = ({ data }: IProps) => {
   return (
     <FadeOnScroll>
-      <section id="skills">
+      <section id='skills'>
         <div className={styles.outerGrid}>
           <div className={styles.descriptionWrapper}>
             <div className={styles.description}>

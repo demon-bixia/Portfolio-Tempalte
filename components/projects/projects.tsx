@@ -58,7 +58,7 @@ const projects = ({ id, data }: IProps) => {
                     <Button
                       className={styles.demoButton}
                       href={project.demoLink}
-                      target="_blank"
+                      target='_blank'
                       endAdornment={<IonIcon className={styles.icon} name={project.demoLinkIcon} />}
                     >
                       {project.demonLinkText}
@@ -68,7 +68,7 @@ const projects = ({ id, data }: IProps) => {
                       variant='outlined'
                       color='white'
                       href={project.projectLink}
-                      target="_blank"
+                      target='_blank'
                       endAdornment={<IonIcon className={styles.icon} name={project.projectLinkIcon} />}
                     >
                       {project.projectLinkText}
