@@ -1,0 +1,38 @@
+.article {
+  padding: 70px 32px 100px 32px;
+}
+
+.article .title {
+  margin-bottom: 16px;
+}
+
+.article .date {
+  margin-bottom: 32px;
+}
+
+.article .cover {
+  width: 100%;
+  height: 550px;
+  margin-bottom: 32px;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article .description {
+  margin-bottom: 40px;
+}
+
+.article .articleContent p {
+  line-height: 30px;
+}
+
+
+/***** Mobile *****/
+
+@media only screen and (max-width: 767px) {
+  .article .cover {
+    height: 250px;
+  }
+}

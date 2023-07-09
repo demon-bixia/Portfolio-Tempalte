@@ -1,4 +1,4 @@
-import Button from '../ui/button/button';
+import Button from '@/components/ui/button/button';
 import styles from './subscribe.module.css'
 
 

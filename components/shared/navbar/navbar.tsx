@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-import Logo from '@/components/logo/logo';
+import Logo from '@/components/shared/logo/logo';
 import Button from '@/components/ui/button/button';
 import Link from '@/components/ui/link/link';
 import IonIcon from '@reacticons/ionicons';
@@ -14,6 +14,7 @@ import styles from './navbar.module.css';
 
 const Navbar = () => {
   const navElement = useRef<HTMLElement>(null);
+  const navWrapperElement = useRef<HTMLDivElement>(null);
   const linksWrapperElement = useRef<HTMLDivElement>(null);
   const [navigationState, setNavigationState] = useState(false);
 
@@ -61,10 +62,12 @@ const Navbar = () => {
       const scrollPosition = window.scrollY;
 
       if (navElement.current) {
-        if (scrollPosition > window.innerHeight) {
+        if (scrollPosition > 100) {
           navElement.current?.classList.add(styles.fixed);
+          navWrapperElement.current?.classList.add(styles.fixed);
         } else {
           navElement.current?.classList.remove(styles.fixed);
+          navWrapperElement.current?.classList.remove(styles.fixed);
         }
 
         if (previousScrollPosition > scrollPosition) {
@@ -85,53 +88,55 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={styles.navbar} ref={navElement}>
-      <Logo />
+    <div className={styles.navbarWrapper} ref={navWrapperElement}>
+      <nav className={styles.navbar} ref={navElement}>
+        <Logo />
 
-      <div
-        id='linksWrapper'
-        ref={linksWrapperElement}
-        className={`${styles.linksWrapper} ${styles.disabled}`}
-        aria-labelledby='openNavigationButton'
-        role='menu'>
-        <Button
-          onClick={closeMenu}
-          className={styles.closeButton}
-          variant='ghost'
-          color='gray'
-          aria-label='close navigation menu'
-        >
-          <IonIcon name='close-outline' className={styles.menuIcon} size='large' />
-        </Button>
+        <div
+          id='linksWrapper'
+          ref={linksWrapperElement}
+          className={`${styles.linksWrapper} ${styles.disabled}`}
+          aria-labelledby='openNavigationButton'
+          role='menu'>
+          <Button
+            onClick={closeMenu}
+            className={styles.closeButton}
+            variant='ghost'
+            color='gray'
+            aria-label='close navigation menu'
+          >
+            <IonIcon name='close-outline' className={styles.menuIcon} size='large' />
+          </Button>
 
-        <ul className={styles.links}>
-          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#hero'>About</Link></li>
-          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#skills'>Skills</Link></li>
-          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#projects'>Projects</Link></li>
-          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#designs'>Designs</Link></li>
-          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#'>Blog</Link></li>
-          <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='#contact'>Contact Me</Link></li>
-        </ul>
-      </div>
+          <ul className={styles.links}>
+            <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='/#hero'>About</Link></li>
+            <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='/#skills'>Skills</Link></li>
+            <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='/#projects'>Projects</Link></li>
+            <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='/#designs'>Designs</Link></li>
+            <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='/blog/'>Blog</Link></li>
+            <li className={styles.link}><Link onClick={closeMenu} typography='body-2' href='/#contact'>Contact Me</Link></li>
+          </ul>
+        </div>
 
-      <div>
-        <Button className={styles.contactButton} variant='outlined' color='gray' href='#contact'>
-          Contact Me
-        </Button>
+        <div>
+          <Button className={styles.contactButton} variant='outlined' color='gray' href='/#contact'>
+            Contact Me
+          </Button>
 
-        <Button
-          onClick={openMenu} id='openNavigationButton'
-          className={styles.openButton}
-          variant='ghost'
-          color='gray'
-          aria-label='open navigation menu'
-          aria-controls='linksWrapper'
-          aria-expanded={navigationState}
-        >
-          <IonIcon name='menu-outline' className={styles.menuIcon} size='large' />
-        </Button>
-      </div>
-    </nav>
+          <Button
+            onClick={openMenu} id='openNavigationButton'
+            className={styles.openButton}
+            variant='ghost'
+            color='gray'
+            aria-label='open navigation menu'
+            aria-controls='linksWrapper'
+            aria-expanded={navigationState}
+          >
+            <IonIcon name='menu-outline' className={styles.menuIcon} size='large' />
+          </Button>
+        </div>
+      </nav>
+    </div>
   );
 };
 

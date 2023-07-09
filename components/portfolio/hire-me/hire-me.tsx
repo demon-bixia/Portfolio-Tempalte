@@ -8,8 +8,11 @@ import styles from './hire-me.module.css';
 const HireMe = () => {
   return (
     <div className={styles.buttonGroup}>
-      <Button className={styles.button}>Hire Me</Button>
+      <Button className={styles.button} href='#contact'>
+        Hire Me
+      </Button>
       <Button
+        href='#projects'
         className={styles.button}
         variant='ghost'
         endAdornment={<IonIcon name='open-outline' className={styles.openIcon} />}

@@ -2,6 +2,7 @@ import type { TTypographyVariants } from '@/components/ui/typography/typography'
 import { chooseTypography } from '@/components/ui/typography/typography';
 import React from 'react';
 import styles from './button.module.css';
+import NextLink from 'next/link';
 
 
 // **** Types **** //
@@ -52,26 +53,45 @@ const Button = ({
   ...props
 }: IProps) => {
   const [typeStyle] = chooseTypography(typography);
-  const elementName = href ? 'a' : 'button';
 
-  const elementProps: IProps = {
-    className: `${styles.button} ${typeStyle} ${colorStyles[color]} ${variantStyles[variant]} ${className}`,
-    href: href,
-    ...props
-  };
+  return (
+    <>
+      {
+        href
+          ? (
+            <NextLink
+              className={`${styles.button} ${typeStyle} ${colorStyles[color]} ${variantStyles[variant]} ${className}`}
+              href={href}
+              {...props}
+            >
 
-  if (!href) {
-    elementProps['type'] = type;
-  }
+              {children}
 
-  const element = React.createElement(
-    elementName,
-    elementProps,
-    children,
-    endAdornment ? <span className={styles.endAdornmentContainer}>{endAdornment}</span> : null
+              {
+                endAdornment
+                  ? (<span className={styles.endAdornmentContainer}>{endAdornment}</span>)
+                  : null
+              }
+            </NextLink>
+          )
+          : (
+            <button
+              className={`${styles.button} ${typeStyle} ${colorStyles[color]} ${variantStyles[variant]} ${className}`}
+              {...props}
+            >
+
+              {children}
+
+              {
+                endAdornment
+                  ? (<span className={styles.endAdornmentContainer}>{endAdornment}</span>)
+                  : null
+              }
+            </button>
+          )
+      }
+    </>
   );
-
-  return element;
 };
 
 

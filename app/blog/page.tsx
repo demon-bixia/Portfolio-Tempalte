@@ -1,8 +1,8 @@
 import heroData from '@/data/hero';
 
-import Hero from '@/components/hero/hero';
-import Subscribe from '@/components/subscribe/subscribe';
-import Articles from '@/components/articles/articles';
+import Hero from '@/components/shared/hero/hero';
+import Subscribe from '@/components/blog/subscribe/subscribe';
+import Articles from '@/components/blog/articles/articles';
 
 import styles from './page.module.css';
 
@@ -11,7 +11,7 @@ import styles from './page.module.css';
 
 const Blog = () => {
   return (
-    <main id='mainContent'>
+    <div>
       {/* Blur Background */}
       <div className={styles.blurBackground}></div>
 
@@ -22,7 +22,7 @@ const Blog = () => {
 
       {/* Articles Section */}
       <Articles />
-    </main>
+    </div>
   );
 };
 

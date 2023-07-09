@@ -26,6 +26,7 @@ const Logo = () => {
       </Link>
 
       <Link
+        href='/'
         className={skipLinkFocused ? styles.hideLogo : ''}
         aria-label='home'
       >

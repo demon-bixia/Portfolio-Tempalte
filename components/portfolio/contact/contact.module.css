@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   column-gap: 60px;
-  border-bottom: 1px solid var(--border);
 }
 
 .grid .description {

@@ -2,11 +2,11 @@ import projectsData from '@/data/projects';
 import skillsData from '@/data/skills';
 import heroData from '@/data/hero';
 
-import Contact from '@/components/contact/contact';
-import Hero from '@/components/hero/hero';
-import Projects from '@/components/projects/projects';
-import Skills from '@/components/skills/skills';
-import HireMe from '@/components/hire-me/hire-me';
+import Contact from '@/components/portfolio/contact/contact';
+import Hero from '@/components/shared/hero/hero';
+import Projects from '@/components/portfolio/projects/projects';
+import Skills from '@/components/portfolio/skills/skills';
+import HireMe from '@/components/portfolio/hire-me/hire-me';
 
 import styles from './page.module.css';
 
@@ -15,7 +15,7 @@ import styles from './page.module.css';
 
 export const Home = () => {
   return (
-    <main id='mainContent'>
+    <div>
       {/* Blur Background */}
       <div className={styles.blurBackground}></div>
 
@@ -36,7 +36,7 @@ export const Home = () => {
       {/* Contact Section */}
       <Contact />
 
-    </main >
+    </div >
   );
 };
 

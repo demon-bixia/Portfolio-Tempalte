@@ -11,7 +11,9 @@ interface IProps {
   label?: string;
   placeholder?: string;
   multiline?: boolean;
+  value?: string;
   endAdornment?: React.ReactNode;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 

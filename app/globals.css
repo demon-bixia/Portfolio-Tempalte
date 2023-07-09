@@ -2,7 +2,7 @@
 @import 'normalize.css';
 
 
-/***** Global Styles *****/
+/***** Theme Values *****/
 
 :root {
   /* Colors */
@@ -53,10 +53,16 @@
   --display-3: 900 20px/27px 'Noto Sans', sans-serif;
 }
 
+
+/***** Global Styles *****/
+
 body {
-  /* Default values */
   font-family: 'Noto Sans', sans-serif;
   color: var(--gray-700);
+}
+
+main {
+  min-height: calc(100vh - 199.39px);
 }
 
 

@@ -1,21 +1,31 @@
 import footerData from '@/data/footer';
 
-import Footer from '@/components/footer/footer';
-import Navbar from '@/components/navbar/navbar';
+import Footer from '@/components/shared/footer/footer';
+import Navbar from '@/components/shared/navbar/navbar';
 
 import './globals.css';
 
+
+// **** Types **** //
+
+interface IProps {
+  children: React.ReactNode
+}
+
+
+// **** Variables **** //
 
 export const metadata = {
   title: 'Portfolio',
   description: 'Web development portfolio website.',
 }
 
-export default function RootLayout({
+
+// **** Component **** //
+
+const RootLayout = ({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: IProps) => {
   return (
     <html lang='en'>
       <body>
@@ -23,7 +33,9 @@ export default function RootLayout({
         <Navbar />
 
         {/* Main Section  */}
-        {children}
+        <main id='mainContent'>
+          {children}
+        </main>
 
         {/* Footer  */}
         <Footer data={footerData} />
@@ -31,3 +43,8 @@ export default function RootLayout({
     </html>
   )
 }
+
+
+// **** Default export **** //
+
+export default RootLayout;
