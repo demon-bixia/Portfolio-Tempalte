@@ -35,7 +35,6 @@ export const Home = () => {
 
       {/* Contact Section */}
       <Contact />
-
     </div >
   );
 };

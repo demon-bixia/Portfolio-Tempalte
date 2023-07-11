@@ -1,0 +1,24 @@
+.contactForm {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+}
+
+.contactForm .sendButtonWrapper {
+  display: grid;
+  place-content: end;
+}
+
+.contactForm .sendButtonWrapper .sendButton {
+  min-width: 180px;
+}
+
+.contactForm .sendButtonWrapper .sendButton .icon {
+  margin-left: 12px;
+}
+
+.contactForm .sendButtonWrapper .sendButton .icon svg {
+  width: 16px;
+  height: 16px;
+}

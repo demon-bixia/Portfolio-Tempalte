@@ -1,10 +1,9 @@
 'use client'
 
-import Button from '@/components/ui/button/button';
-import TextInput from '@/components/ui/text-input/text-input';
-import Typography from '@/components/ui/typography/typography';
+import ContactForm from '@/components/portfolio/contact/contact-form/contact-form';
 import FadeOnScroll from '@/components/transitions/fade-on-scroll/fade-on-scroll';
-import IonIcon from '@reacticons/ionicons';
+import Typography from '@/components/ui/typography/typography';
+
 import styles from './contact.module.css';
 
 
@@ -22,16 +21,7 @@ export const Contact = () => {
             </div>
             <div className={styles.underline}></div>
           </div>
-
-          <form className={styles.contactForm}>
-            <TextInput id='email' label='Email Address' placeholder='Enter your email address.' />
-            <TextInput id='email-content' label='Content' placeholder='Type the content of you message.' multiline />
-            <div className={styles.sendButtonWrapper}>
-              <Button className={styles.sendButton} variant='outlined' endAdornment={<IonIcon name='send-outline' className={styles.icon} />}>
-                Send Email
-              </Button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </FadeOnScroll>

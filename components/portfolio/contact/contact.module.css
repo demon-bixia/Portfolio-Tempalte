@@ -23,31 +23,6 @@
   background-color: var(--blue-200);
 }
 
-.grid .contactForm {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 32px;
-}
-
-.grid .contactForm .sendButtonWrapper {
-  display: grid;
-  place-content: end;
-}
-
-.grid .contactForm .sendButtonWrapper .sendButton {
-  min-width: 180px;
-}
-
-.grid .contactForm .sendButtonWrapper .sendButton .icon {
-  margin-left: 12px;
-}
-
-.grid .contactForm .sendButtonWrapper .sendButton .icon svg {
-  width: 16px;
-  height: 16px;
-}
-
 
 /***** Tablet *****/
 
