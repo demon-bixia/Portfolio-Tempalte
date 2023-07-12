@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Button from '@/components/ui/button/button';
 import Snackbar from '@/components/ui/snackbar/snackbar';
@@ -16,25 +16,45 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('idle');
 
-  /** */
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setName(event.target.value);
   };
 
-  /** */
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setEmail(event.target.value);
   };
 
-  /** */
   const handleMessageChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setMessage(event.target.value);
   };
 
-  /** */
   const handleFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    try {
+      await fetch('https://api.slapform.com/tmlKbU5xA', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', },
+        body: JSON.stringify({
+          name: name,
+          email_address: email,
+          message: message,
+          slap_replyto: 'msmainacco0unt@gmail.com'
+        })
+      });
+      setStatus('success');
+    } catch {
+      setStatus('failure')
+    }
   };
+
+  useEffect(() => {
+    if (['success', 'failure'].includes(status)) {
+      setEmail('');
+      setName('');
+      setMessage('');
+      setTimeout(() => setStatus('idle'), 2000);
+    }
+  }, [status])
 
   return (
     <>
