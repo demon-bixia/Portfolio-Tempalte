@@ -1,16 +1,16 @@
-import type { TTypographyVariants } from '@/components/ui/typography/typography';
+import type { TTypographyVariants } from "@/components/ui/typography/typography";
 
-import Typography from '@/components/ui/typography/typography';
-import IonIcon from '@reacticons/ionicons';
+import Typography from "@/components/ui/typography/typography";
+import IonIcon from "@reacticons/ionicons";
 
-import styles from './snackbar.module.css';
+import styles from "./snackbar.module.css";
 
 
 // **** Types **** //
 
 interface IProps {
   icon: any;
-  color: 'success' | 'danger';
+  color: "success" | "danger";
   typography?: TTypographyVariants;
   children: React.ReactNode;
 }
@@ -19,14 +19,14 @@ interface IProps {
 // **** Variables **** //
 
 const colorVariants = {
-  'danger': styles.danger,
-  'success': styles.success,
+  "danger": styles.danger,
+  "success": styles.success,
 }
 
 
 // **** Component **** //
 
-const Snackbar = ({ icon, color, children, typography = 'body-2' }: IProps) => {
+const Snackbar = ({ icon, color, children, typography = "body-2" }: IProps) => {
   const colorStyle = colorVariants[color];
 
   return (

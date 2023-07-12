@@ -1,6 +1,6 @@
-import type { TTypographyVariants } from '@/components/ui/typography/typography';
-import Typography from '@/components/ui/typography/typography';
-import styles from './hero.module.css';
+import type { TTypographyVariants } from "@/components/ui/typography/typography";
+import Typography from "@/components/ui/typography/typography";
+import styles from "./hero.module.css";
 
 
 // **** Types **** //
@@ -21,7 +21,7 @@ interface IProps {
 
 const Hero = ({ data, children }: IProps) => {
   return (
-    <section id='hero' className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <div className={styles.welcome} style={{ maxWidth: data.textMaxWidth }}>
         <Typography variant={data.titleFont}>{data.title}</Typography>
         <Typography variant={data.descriptionFont}>{data.description}</Typography>

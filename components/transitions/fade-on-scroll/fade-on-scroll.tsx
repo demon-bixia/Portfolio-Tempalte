@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import styles from './fade-on-scroll.module.css';
+import { useEffect, useRef } from "react";
+import styles from "./fade-on-scroll.module.css";
 
 
 // **** Components **** //

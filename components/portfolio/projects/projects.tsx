@@ -1,17 +1,17 @@
-'use client'
+"use client"
 
-import type { StaticImageData } from 'next/image';
-import React, { useState } from 'react';
+import type { StaticImageData } from "next/image";
+import React, { useState } from "react";
 
-import FadeOnScroll from '@/components/transitions/fade-on-scroll/fade-on-scroll';
-import Button from '@/components/ui/button/button';
-import Typography from '@/components/ui/typography/typography';
-import IonIcon from '@reacticons/ionicons';
-import Image from 'next/image';
-import { PhotoSlider } from 'react-photo-view';
+import FadeOnScroll from "@/components/transitions/fade-on-scroll/fade-on-scroll";
+import Button from "@/components/ui/button/button";
+import Typography from "@/components/ui/typography/typography";
+import IonIcon from "@reacticons/ionicons";
+import Image from "next/image";
+import { PhotoSlider } from "react-photo-view";
 
-import 'react-photo-view/dist/react-photo-view.css';
-import styles from './projects.module.css';
+import "react-photo-view/dist/react-photo-view.css";
+import styles from "./projects.module.css";
 
 
 // **** Types **** //
@@ -26,7 +26,7 @@ interface IProject {
   projectLink?: string;
   projectLinkText: string;
   projectLinkIcon: any;
-  screenshots?: [];
+  screenshots?: string[];
 }
 
 interface IProps {
@@ -59,7 +59,7 @@ const getSliderInitialStates = (projects: IProject[]) => {
 
 // **** Component **** //
 
-const projects = ({ id, data }: IProps) => {
+const Projects = ({ id, data }: IProps) => {
   const [slidersStates, setSlidersStates] = useState(getSliderInitialStates(data.projects));
 
   /**
@@ -91,8 +91,8 @@ const projects = ({ id, data }: IProps) => {
         <div className={styles.outerGrid}>
           <div className={styles.descriptionWrapper}>
             <div className={styles.description}>
-              <Typography className={styles.header} variant='heading-5'>{data.title}</Typography>
-              <Typography className={styles.text} variant='body-4'>{data.description}</Typography>
+              <Typography className={styles.header} variant="heading-5">{data.title}</Typography>
+              <Typography className={styles.text} variant="body-4">{data.description}</Typography>
             </div>
             <div className={styles.underline}></div>
           </div>
@@ -108,17 +108,17 @@ const projects = ({ id, data }: IProps) => {
                         className={styles.demoButton}
                         onClick={() => handleOpenSlider(project)}
                         href={project.demoLink}
-                        target='_blank'
+                        target="_blank"
                         endAdornment={<IonIcon className={styles.icon} name={project.demoLinkIcon} />}
                       >
                         {project.demonLinkText}
                       </Button>
                       <Button
                         className={styles.projectButton}
-                        variant='outlined'
-                        color='white'
+                        variant="outlined"
+                        color="white"
                         href={project.projectLink}
-                        target='_blank'
+                        target="_blank"
                         endAdornment={<IonIcon className={styles.icon} name={project.projectLinkIcon} />}
                       >
                         {project.projectLinkText}
@@ -145,7 +145,7 @@ const projects = ({ id, data }: IProps) => {
 
         <div className={styles.seeMoreButtonWrapper}>
           <Button
-            variant='outlined'
+            variant="outlined"
             className={styles.seeMoreButton}
             endAdornment={<IonIcon className={styles.icon} name={data.seeMoreButtonIcon} />}
           >
@@ -160,4 +160,4 @@ const projects = ({ id, data }: IProps) => {
 
 // **** Default export **** //
 
-export default projects;
+export default Projects;

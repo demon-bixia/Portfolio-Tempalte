@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import Link from '@/components/ui/link/link';
-import IonIcon from '@reacticons/ionicons';
-import Image from 'next/image';
+import Link from "@/components/ui/link/link";
+import IonIcon from "@reacticons/ionicons";
+import Image from "next/image";
 
-import MyLogo from '@/public/vectors/logo.svg';
-import styles from './logo.module.css';
+import MyLogo from "@/public/vectors/logo.svg";
+import styles from "./logo.module.css";
 
 
 // **** Component **** //
@@ -16,21 +16,21 @@ const Logo = () => {
   return (
     <div className={styles.container}>
       <Link
-        href='#mainContent'
-        className={skipLinkFocused ? '' : styles.hideSkip}
+        href="#mainContent"
+        className={skipLinkFocused ? "" : styles.hideSkip}
         onBlur={() => { setSkipLinkFocused(false) }}
         onFocus={() => { setSkipLinkFocused(true) }}
-        aria-label='skip to main content'
+        aria-label="skip to main content"
       >
-        <IonIcon name='play-forward-outline' />
+        <IonIcon name="play-forward-outline" />
       </Link>
 
       <Link
-        href='/'
-        className={skipLinkFocused ? styles.hideLogo : ''}
-        aria-label='home'
+        href="/"
+        className={skipLinkFocused ? styles.hideLogo : ""}
+        aria-label="home"
       >
-        <Image src={MyLogo} alt='MS Logo' />
+        <Image src={MyLogo} alt="MS Logo" />
       </Link>
     </div>
   );

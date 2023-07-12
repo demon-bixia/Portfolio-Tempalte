@@ -1,5 +1,5 @@
-import styles from './text-input.module.css';
-import React from 'react';
+import styles from "./text-input.module.css";
+import React from "react";
 
 
 // **** IProps **** //
@@ -7,7 +7,7 @@ import React from 'react';
 interface IProps {
   id?: string;
   className?: string;
-  type?: 'text' | 'password';
+  type?: "text" | "password";
   label?: string;
   placeholder?: string;
   multiline?: boolean;
@@ -20,12 +20,12 @@ interface IProps {
 
 // **** Component **** //
 
-export const TextInput = ({ id, label, className, endAdornment, type = 'text', multiline = false, ...props }: IProps) => {
-  const elementName = multiline ? 'textarea' : 'input';
+export const TextInput = ({ id, label, className, endAdornment, type = "text", multiline = false, ...props }: IProps) => {
+  const elementName = multiline ? "textarea" : "input";
 
   const element = React.createElement(elementName, {
     id: id,
-    className: `${styles.input} ${multiline ? styles.multiline : ''} ${className}`,
+    className: `${styles.input} ${multiline ? styles.multiline : ""} ${className}`,
     type: type,
     ...props
   });

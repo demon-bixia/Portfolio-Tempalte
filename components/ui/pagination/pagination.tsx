@@ -1,7 +1,7 @@
-import Button from '@/components/ui/button/button';
-import { IArticle } from '@/types/interfaces';
-import IonIcon from '@reacticons/ionicons';
-import styles from './pagination.module.css';
+import Button from "@/components/ui/button/button";
+import { IArticle } from "@/types/interfaces";
+import IonIcon from "@reacticons/ionicons";
+import styles from "./pagination.module.css";
 
 
 // **** Types **** //
@@ -22,16 +22,16 @@ const Pagination = ({ paginatedArticles, page, changePage }: IProps) => {
     <div className={styles.pagination}>
       <ul className={styles.pages}>
         <li>
-          <Button onClick={() => handlePageChange(page - 1)} className={styles.pageLink} color='white'>
-            <IonIcon name='chevron-back-outline' className={styles.icon} />
+          <Button onClick={() => handlePageChange(page - 1)} className={styles.pageLink} color="white">
+            <IonIcon name="chevron-back-outline" className={styles.icon} />
           </Button>
         </li>
         {paginatedArticles.map((_articles, index) => (
-          <li>
+          <li key={index}>
             <Button
               onClick={() => handlePageChange(index)}
               className={styles.pageLink}
-              color='white'
+              color="white"
               disabled={index === page}
             >
               {index + 1}
@@ -39,8 +39,8 @@ const Pagination = ({ paginatedArticles, page, changePage }: IProps) => {
           </li>
         ))}
         <li>
-          <Button onClick={() => handlePageChange(page + 1)} className={styles.pageLink} color='white' >
-            <IonIcon name='chevron-forward-outline' className={styles.icon} />
+          <Button onClick={() => handlePageChange(page + 1)} className={styles.pageLink} color="white" >
+            <IonIcon name="chevron-forward-outline" className={styles.icon} />
           </Button>
         </li>
       </ul>

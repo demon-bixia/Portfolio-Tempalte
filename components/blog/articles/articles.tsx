@@ -1,22 +1,22 @@
-'use client'
+"use client"
 
-import articlesData from '@/data/articles';
-import { useEffect, useState } from 'react';
-import type { IArticle } from '@/types/interfaces';
+import articlesData from "@/data/articles";
+import { useEffect, useState } from "react";
+import type { IArticle } from "@/types/interfaces";
 
-import ArticleCard from '@/components/blog/article-card/article-card';
-import Pagination from '@/components/ui/pagination/pagination';
-import TextInput from '@/components/ui/text-input/text-input';
-import Typography from '@/components/ui/typography/typography';
-import IonIcon from '@reacticons/ionicons';
+import ArticleCard from "@/components/blog/article-card/article-card";
+import Pagination from "@/components/ui/pagination/pagination";
+import TextInput from "@/components/ui/text-input/text-input";
+import Typography from "@/components/ui/typography/typography";
+import IonIcon from "@reacticons/ionicons";
 
-import styles from './articles.module.css';
+import styles from "./articles.module.css";
 
 
 // **** Component **** //
 
 const Articles = () => {
-  const [filterText, setFilterText] = useState('');
+  const [filterText, setFilterText] = useState("");
   const [filteredArticles, setFilteredArticles] = useState<IArticle[]>([]);
   const [paginatedArticles, setPaginatedArticles] = useState<IArticle[][]>([]);
   const [page, setPage] = useState(0);
@@ -55,15 +55,15 @@ const Articles = () => {
   }, [filterText, page]);
 
   return (
-    <section id='articles' className={styles.articles}>
+    <section id="articles" className={styles.articles}>
       <div className={styles.topSection}>
-        <Typography className={styles.title} variant='heading-5'>Recent Articles</Typography>
+        <Typography className={styles.title} variant="heading-5">Recent Articles</Typography>
         <TextInput
           className={styles.searchInput}
-          placeholder='Filter articles'
+          placeholder="Filter articles"
           value={filterText}
           onChange={handleFilterChange}
-          endAdornment={<IonIcon name='search-outline' className={styles.icon} />}
+          endAdornment={<IonIcon name="search-outline" className={styles.icon} />}
         />
       </div>
 

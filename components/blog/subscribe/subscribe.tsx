@@ -1,5 +1,5 @@
-import Button from '@/components/ui/button/button';
-import styles from './subscribe.module.css'
+import Button from "@/components/ui/button/button";
+import styles from "./subscribe.module.css"
 
 
 // **** Component **** //
@@ -7,10 +7,10 @@ import styles from './subscribe.module.css'
 const Subscribe = () => {
   return (
     <div className={styles.container}>
-      <input className={styles.emailInput} type='text' placeholder='Email Address' />
+      <input className={styles.emailInput} type="text" placeholder="Email Address" />
 
       <div className={styles.subscribeButtonWrapper}>
-        <Button className={styles.subscribeButton} color='gray'>
+        <Button className={styles.subscribeButton} color="gray">
           Subscribe
         </Button>
       </div>

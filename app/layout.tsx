@@ -1,9 +1,9 @@
-import footerData from '@/data/footer';
+import footerData from "@/data/footer";
 
-import Footer from '@/components/shared/footer/footer';
-import Navbar from '@/components/shared/navbar/navbar';
+import Footer from "@/components/shared/footer/footer";
+import Navbar from "@/components/shared/navbar/navbar";
 
-import './globals.css';
+import "./globals.css";
 
 
 // **** Types **** //
@@ -16,8 +16,8 @@ interface IProps {
 // **** Variables **** //
 
 export const metadata = {
-  title: 'Portfolio',
-  description: 'Web development portfolio website.',
+  title: "Portfolio",
+  description: "Web development portfolio website.",
 }
 
 
@@ -27,13 +27,13 @@ const RootLayout = ({
   children,
 }: IProps) => {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
         {/* Navigation Menu  */}
         <Navbar />
 
         {/* Main Section  */}
-        <main id='mainContent'>
+        <main id="mainContent">
           {children}
         </main>
 

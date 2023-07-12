@@ -1,6 +1,6 @@
-import Button from '@/components/ui/button/button';
-import IonIcon from '@reacticons/ionicons';
-import styles from './hire-me.module.css';
+import Button from "@/components/ui/button/button";
+import IonIcon from "@reacticons/ionicons";
+import styles from "./hire-me.module.css";
 
 
 // **** Components **** //
@@ -8,14 +8,14 @@ import styles from './hire-me.module.css';
 const HireMe = () => {
   return (
     <div className={styles.buttonGroup}>
-      <Button className={styles.button} href='#contact'>
+      <Button className={styles.button} href="#contact">
         Hire Me
       </Button>
       <Button
-        href='#projects'
+        href="#projects"
         className={styles.button}
-        variant='ghost'
-        endAdornment={<IonIcon name='open-outline' className={styles.openIcon} />}
+        variant="ghost"
+        endAdornment={<IonIcon name="open-outline" className={styles.openIcon} />}
       >
         Projects
       </Button>

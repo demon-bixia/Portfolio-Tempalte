@@ -1,7 +1,7 @@
-import type { TTypographyVariants } from '@/components/ui/typography/typography';
-import { chooseTypography } from '@/components/ui/typography/typography';
-import styles from './link.module.css';
-import NextLink from 'next/link';
+import type { TTypographyVariants } from "@/components/ui/typography/typography";
+import { chooseTypography } from "@/components/ui/typography/typography";
+import styles from "./link.module.css";
+import NextLink from "next/link";
 
 
 // **** Types **** //
@@ -21,15 +21,15 @@ interface IProps {
 // **** Components **** //
 
 const Link = ({
-  href = '#',
-  typography = 'body-5',
+  href = "#",
+  typography = "body-5",
   children,
   ...props
 }: IProps) => {
   const [typeStyle] = chooseTypography(typography);
 
   return (
-    <NextLink href={href} className={styles.link + ' ' + typeStyle} {...props}>
+    <NextLink href={href} className={styles.link + " " + typeStyle} {...props}>
       {children}
     </NextLink>
   );

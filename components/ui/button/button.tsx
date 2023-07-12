@@ -1,20 +1,20 @@
-import type { TTypographyVariants } from '@/components/ui/typography/typography';
-import { chooseTypography } from '@/components/ui/typography/typography';
-import React from 'react';
-import styles from './button.module.css';
-import NextLink from 'next/link';
+import type { TTypographyVariants } from "@/components/ui/typography/typography";
+import { chooseTypography } from "@/components/ui/typography/typography";
+import React from "react";
+import styles from "./button.module.css";
+import NextLink from "next/link";
 
 
 // **** Types **** //
 
 interface IProps {
-  variant?: 'contained' | 'outlined' | 'ghost';
-  color?: 'primary' | 'secondary' | 'gray' | 'white';
+  variant?: "contained" | "outlined" | "ghost";
+  color?: "primary" | "secondary" | "gray" | "white";
   typography?: TTypographyVariants;
   endAdornment?: React.ReactNode;
   className?: string;
   id?: string;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
   href?: string;
   target?: string;
   disabled?: boolean;
@@ -42,20 +42,20 @@ const variantStyles = {
 // **** Component **** //
 
 const Button = ({
-  variant = 'contained',
-  color = 'primary',
-  typography = 'heading-7',
+  variant = "contained",
+  color = "primary",
+  typography = "heading-7",
   endAdornment,
   className,
   children,
-  type = 'button',
+  type = "button",
   href,
   ...props
 }: IProps) => {
   const [typeStyle] = chooseTypography(typography);
 
   return (
-    <>
+    <React.Fragment>
       {
         href
           ? (
@@ -90,7 +90,7 @@ const Button = ({
             </button>
           )
       }
-    </>
+    </React.Fragment>
   );
 };
 

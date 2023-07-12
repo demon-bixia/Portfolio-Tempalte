@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;900&display=swap');
-@import 'normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;900&display=swap");
+@import "normalize.css";
 
 
 /***** Theme Values *****/
@@ -39,30 +39,30 @@
 
   /* Types */
 
-  --heading-1: 300 54px/73px 'Noto Sans', sans-serif;
-  --heading-2: 300 42px/57px 'Noto Sans', sans-serif;
-  --heading-3: 300 32px/43px 'Noto Sans', sans-serif;
-  --heading-4: 400 28px/38px 'Noto Sans', sans-serif;
-  --heading-5: 400 20px/27px 'Noto Sans', sans-serif;
-  --heading-6: 600 14px/19px 'Noto Sans', sans-serif;
-  --heading-7: 600 12px/16px 'Noto Sans', sans-serif;
+  --heading-1: 300 54px/73px "Noto Sans", sans-serif;
+  --heading-2: 300 42px/57px "Noto Sans", sans-serif;
+  --heading-3: 300 32px/43px "Noto Sans", sans-serif;
+  --heading-4: 400 28px/38px "Noto Sans", sans-serif;
+  --heading-5: 400 20px/27px "Noto Sans", sans-serif;
+  --heading-6: 600 14px/19px "Noto Sans", sans-serif;
+  --heading-7: 600 12px/16px "Noto Sans", sans-serif;
 
-  --body-1: 400 18px/24px 'Noto Sans', sans-serif;
-  --body-2: 400 16px/21px 'Noto Sans', sans-serif;
-  --body-3: 400 14px/19px 'Noto Sans', sans-serif;
-  --body-4: 400 12px/16px 'Noto Sans', sans-serif;
-  --body-5: 400 10px/13px 'Noto Sans', sans-serif;
+  --body-1: 400 18px/24px "Noto Sans", sans-serif;
+  --body-2: 400 16px/21px "Noto Sans", sans-serif;
+  --body-3: 400 14px/19px "Noto Sans", sans-serif;
+  --body-4: 400 12px/16px "Noto Sans", sans-serif;
+  --body-5: 400 10px/13px "Noto Sans", sans-serif;
 
-  --display-1: 900 45px/61px 'Noto Sans', sans-serif;
-  --display-2: 900 30px/40px 'Noto Sans', sans-serif;
-  --display-3: 900 20px/27px 'Noto Sans', sans-serif;
+  --display-1: 900 45px/61px "Noto Sans", sans-serif;
+  --display-2: 900 30px/40px "Noto Sans", sans-serif;
+  --display-3: 900 20px/27px "Noto Sans", sans-serif;
 }
 
 
 /***** Global Styles *****/
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   color: var(--gray-700);
 }
 

@@ -1,15 +1,15 @@
-import heroData from '@/data/hero';
+import heroData from "@/data/hero";
 
-import Hero from '@/components/shared/hero/hero';
-import Subscribe from '@/components/blog/subscribe/subscribe';
-import Articles from '@/components/blog/articles/articles';
+import Hero from "@/components/shared/hero/hero";
+import Subscribe from "@/components/blog/subscribe/subscribe";
+import Articles from "@/components/blog/articles/articles";
 
-import styles from './page.module.css';
+import styles from "./page.module.css";
 
 
 // **** Component **** //
 
-const Blog = () => {
+export default function Blog() {
   return (
     <div>
       {/* Blur Background */}
@@ -25,8 +25,3 @@ const Blog = () => {
     </div>
   );
 };
-
-
-// **** Default export **** //
-
-export default Blog;
