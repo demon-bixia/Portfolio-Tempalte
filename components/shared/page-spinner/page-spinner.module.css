@@ -1,0 +1,44 @@
+.pageSpinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  background-color: var(--white);
+}
+
+.spinnerWrapper {
+  position: relative;
+}
+
+.spinner::before {
+  animation: 0.8s linear infinite spin;
+  animation-play-state: inherit;
+  border: solid 5px var(--gray-200);
+  border-bottom-color: var(--blue-200);
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 40px;
+  will-change: transform;
+}
+
+
+/***** Animation *****/
+
+
+@keyframes spin {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}

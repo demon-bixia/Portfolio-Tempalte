@@ -2,6 +2,7 @@ import footerData from "@/data/footer";
 
 import Footer from "@/components/shared/footer/footer";
 import Navbar from "@/components/shared/navbar/navbar";
+import PageSpinner from "@/components/shared/page-spinner/page-spinner";
 
 import "./globals.css";
 

@@ -12,10 +12,10 @@ const FadeOnScroll = ({ children }: { children?: React.ReactNode; }) => {
       for (const entry of entires) {
         if (entry.isIntersecting) {
           // The element is now intersecting the viewport, so fade it in
-          element.current?.classList.add(styles.active)
+          element.current?.classList.add(styles.active);
         }
       }
-    }, { threshold: 0.4 });
+    }, { threshold: 0.3 });
 
     if (element.current) {
       observer.observe(element.current);
