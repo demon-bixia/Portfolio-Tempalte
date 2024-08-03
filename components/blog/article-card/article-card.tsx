@@ -1,4 +1,5 @@
 import type { IArticle } from "@/types/interfaces";
+
 import Link from "@/components/ui/link/link";
 import Typography from "@/components/ui/typography/typography";
 

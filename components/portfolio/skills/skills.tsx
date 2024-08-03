@@ -29,7 +29,7 @@ const Skills = ({ data }: IProps) => {
           <div className={styles.descriptionWrapper}>
             <div className={styles.description}>
               <Typography className={styles.header} variant="heading-5">{data.title}</Typography>
-              <Typography className={styles.text} variant="body-4">{data.description}</Typography>
+              <Typography className={styles.text} variant="body-3">{data.description}</Typography>
             </div>
             <div className={styles.underline}></div>
           </div>
@@ -39,7 +39,7 @@ const Skills = ({ data }: IProps) => {
               <div className={styles.item} key={index}>
                 <IonIcon className={styles.icon} name={(skill.icon as any)} />
                 <Typography className={styles.name} variant="heading-5">{skill.title}</Typography>
-                <Typography variant="body-4">{skill.text}</Typography>
+                <Typography variant="body-3">{skill.text}</Typography>
               </div>
             ))}
           </div>

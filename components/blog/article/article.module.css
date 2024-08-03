@@ -1,38 +1,43 @@
 .article {
-  padding: 70px 32px 70px 32px;
+  padding: 4.375rem 5rem 4.375rem 5rem;
 }
 
 .article .title {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+.article .commentsTitle {
+  margin: 4rem 0 1rem 0;
 }
 
 .article .date {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .article .cover {
   width: 100%;
-  height: 550px;
-  margin-bottom: 32px;
-  border-radius: 5px;
+  height: 34.375rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3125rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .article .description {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+  font-style: italic;
 }
 
 .article .articleContent p {
-  line-height: 30px;
+  line-height: 1.875rem;
 }
 
 
 /***** Mobile *****/
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 47.9375rem) {
   .article .cover {
-    height: 250px;
+    height: 15.625rem;
   }
 }

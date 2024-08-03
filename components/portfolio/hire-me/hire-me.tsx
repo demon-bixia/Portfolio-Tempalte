@@ -9,13 +9,13 @@ const HireMe = () => {
   return (
     <div className={styles.buttonGroup}>
       <Button className={styles.button} href="#contact">
-        Hire Me
+        Contact Me
       </Button>
       <Button
         href="#projects"
         className={styles.button}
         variant="ghost"
-        endAdornment={<IonIcon name="open-outline" className={styles.openIcon} />}
+        endAdornment={<IonIcon name="code-working-outline" className={styles.openIcon} />}
       >
         Projects
       </Button>

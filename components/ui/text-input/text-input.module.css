@@ -1,7 +1,7 @@
 .formControl {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 12px;
+  row-gap: 0.75rem;
 }
 
 .formControl .label {
@@ -14,10 +14,10 @@
 
 .formControl .inputWrapper .input {
   width: 100%;
-  padding: 14px 12px;
+  padding: 0.875rem 0.75rem;
   box-sizing: border-box;
-  border: 1px solid var(--border);
-  border-radius: 5px;
+  border: 0.0625rem solid var(--border);
+  border-radius: 0.3125rem;
   background-color: var(--gray-50);
   font: var(--body-3);
   transition: border-color 400ms, background-color 400ms;
@@ -34,8 +34,8 @@
 }
 
 .formControl .inputWrapper .input.multiline {
-  min-height: 200px;
-  max-height: 400px;
+  min-height: 12.5rem;
+  max-height: 25rem;
   resize: vertical;
 }
 
@@ -44,5 +44,5 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  margin-right: 12px;
+  margin-right: 0.75rem;
 }

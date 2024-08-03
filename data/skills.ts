@@ -6,23 +6,23 @@ const skills = {
   skills: [
     {
       icon: "code-slash-outline",
-      title: "Front End Developer",
-      text: "I build client-side of web applications and user-friendly websites.",
+      title: "Front End Development",
+      text: "I can use pure javascript or frameworks like React, Vue, and Svelte to create user-friendly websites.",
     },
     {
-      icon: "construct-outline",
-      title: "Back End Developer",
-      text: "I create server-side application including APIs and web applicaitons."
+      icon: "server-outline",
+      title: "Back End Development",
+      text: "I worked with frameworks like Django, Flask, and Express to create APIs and crud web applications."
     },
     {
       icon: "color-palette-outline",
-      title: "UI/UX Designer",
-      text: "I design the user experience for digital products. to create an easy-to-use interface."
+      title: "UI/UX Design",
+      text: "I can use Figma to design beautiful, and easy-to-use user interfaces. check my designs in the designs section."
     },
     {
-      icon: "phone-portrait-outline",
-      title: "Hybrid Apps",
-      text: "I create mobile applications using hybrid frameworks like React Native."
+      icon: "lock-closed-outline",
+      title: "Cryptography",
+      text: "I can implement and work with popular cryptographic protocols."
     },
     {
       icon: "terminal-outline",
@@ -32,7 +32,7 @@ const skills = {
     {
       icon: "book-outline",
       title: "Always Learning",
-      text: "I am always willing to learn new technologies and adapt to the stack my clients are using."
+      text: "I am always learning new technologies and can adapt to the stack my clients are using."
     },
   ]
 };

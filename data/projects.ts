@@ -3,26 +3,23 @@ import ApiAdminThumbnail from "@/public/images/projects/django-api-admin/thumbna
 import BoltThumbnail from "@/public/images/projects/django-bolt/thumbnail.png";
 import PortfolioThumbnail from "@/public/images/projects/portfolio/thumbnail.png";
 import ThoughtlessThumbnail from "@/public/images/projects/thoughtless/thumbnail.png";
-import TolkThumbnail from "@/public/images/projects/tolk/thumbnail.png";
+import WE2EEThumbnail from "@/public/images/projects/WE2EE/thumbnail.png";
 
-import AvianDesignThumbnail from "@/public/images/designs/avian/thumbnail.png";
+import AvianDesignThumbnail from "@/public/images/designs/neos/thumbnail.png";
 import TestatThumbnail from "@/public/images/designs/testat/thumbnail.png";
 import TheFrontierThumbnail from "@/public/images/designs/the-frontier/thumbnail.png";
 
-import AvianScreenshot1 from "@/public/images/designs/avian/screenshots/messages.png";
-import AvianScreenshot2 from "@/public/images/designs/avian/screenshots/notifications.png";
-import AvianScreenshot3 from "@/public/images/designs/avian/screenshots/settings.png";
-import AvianScreenshot4 from "@/public/images/designs/avian/screenshots/sign-up.png";
+import NeosScreenshot1 from "@/public/images/designs/neos/screenshots/Landing.png";
+import NeosScreenshot2 from "@/public/images/designs/neos/screenshots/Posts.png";
+import NeosScreenshot3 from "@/public/images/designs/neos/screenshots/Post.png";
 
 import TestatScreenshot1 from "@/public/images/designs/testat/screenshots/landing-page.jpg";
-import TestatScreenshot2 from "@/public/images/designs/testat/screenshots/register-page.jpg";
-import TestatScreenshot3 from "@/public/images/designs/testat/screenshots/student-course-dashboard.jpg";
-import TestatScreenshot4 from "@/public/images/designs/testat/screenshots/student-dashboard.png";
+import TestatScreenshot2 from "@/public/images/designs/testat/screenshots/student-course-dashboard.jpg";
+import TestatScreenshot3 from "@/public/images/designs/testat/screenshots/student-dashboard.png";
 
 import TheFrontierScreenshots1 from "@/public/images/designs/the-frontier/screenshots/Article.png";
-import TheFrontierScreenshots2 from "@/public/images/designs/the-frontier/screenshots/Notifications.png";
-import TheFrontierScreenshots3 from "@/public/images/designs/the-frontier/screenshots/Stories.png";
-import TheFrontierScreenshots4 from "@/public/images/designs/the-frontier/screenshots/Write.png";
+import TheFrontierScreenshots2 from "@/public/images/designs/the-frontier/screenshots/Stories.png";
+import TheFrontierScreenshots3 from "@/public/images/designs/the-frontier/screenshots/Write.png";
 
 
 // **** Variables **** //
@@ -47,7 +44,7 @@ const projects = {
         id: "django-bolt",
         thumbnail: BoltThumbnail,
         thumbnailAlt: "Django bolt administration project thumbnail",
-        demoLink: "https://api-admin.demon-bixia.repl.co/",
+        demoLink: "https://github.com/demon-bixia/bolt-demo",
         demonLinkText: "View Demo",
         demoLinkIcon: "open-outline",
         projectLink: "https://github.com/demon-bixia/django-bolt",
@@ -58,7 +55,7 @@ const projects = {
         id: "thoughtless",
         thumbnail: ThoughtlessThumbnail,
         thumbnailAlt: "Thoughtless blog project thumbnail",
-        demoLink: "https://demonbixia.pythonanywhere.com/articles/All/",
+        demoLink: "https://replit.com/@demon-bixia/Thoughtless",
         demonLinkText: "View Demo",
         demoLinkIcon: "open-outline",
         projectLink: "https://github.com/demon-bixia/thoughtless",
@@ -77,13 +74,13 @@ const projects = {
         projectLinkIcon: "logo-github",
       },
       {
-        id: "tolk",
-        thumbnail: TolkThumbnail,
-        thumbnailAlt: "Tolk messaging app project thumbnail",
-        demoLink: "https://tolk-project.up.railway.app/",
+        id: "WE2EE",
+        thumbnail: WE2EEThumbnail,
+        thumbnailAlt: "project thumbnail of a crypto library",
+        demoLink: "https://github.com/demon-bixia/WE2EE-Demo",
         demonLinkText: "View Demo",
         demoLinkIcon: "open-outline",
-        projectLink: "https://github.com/demon-bixia/Tolk",
+        projectLink: "https://github.com/demon-bixia/WE2EE",
         projectLinkText: "Github",
         projectLinkIcon: "logo-github",
       },
@@ -101,25 +98,25 @@ const projects = {
     ],
     seeMoreButtonText: "See More On Github",
     seeMoreButtonIcon: "chevron-forward-outline",
+    seeMoreButtonLink: "https://github.com/demon-bixia"
   },
   designs: {
     title: "My Designs",
     description: "Check out my latest designs and let me know what you think!",
     projects: [
       {
-        id: "avian-design",
+        id: "neos",
         thumbnail: AvianDesignThumbnail,
-        thumbnailAlt: "Avian messaging figma project thumbnail",
+        thumbnailAlt: "Neos figma project thumbnail",
         demonLinkText: "View Shots",
         demoLinkIcon: "images-outline",
-        projectLink: "https://www.figma.com/file/P4anyRLoN2NNhDicfFUcqi/Avian-Messaging?type=design&t=6bWSlEgSMFB1LklL-6",
+        projectLink: "https://www.figma.com/design/K9523UofZSt6xFWvxa0oB8/Neos?node-id=0-1&t=O1ubM0dt20Paun1Q-0",
         projectLinkText: "Figma",
         projectLinkIcon: "logo-figma",
         screenshots: [
-          AvianScreenshot1.src,
-          AvianScreenshot2.src,
-          AvianScreenshot3.src,
-          AvianScreenshot4.src,
+          NeosScreenshot1.src,
+          NeosScreenshot2.src,
+          NeosScreenshot3.src,
         ]
       },
       {
@@ -135,7 +132,6 @@ const projects = {
           TheFrontierScreenshots1.src,
           TheFrontierScreenshots2.src,
           TheFrontierScreenshots3.src,
-          TheFrontierScreenshots4.src,
         ]
       },
       {
@@ -151,12 +147,12 @@ const projects = {
           TestatScreenshot1.src,
           TestatScreenshot2.src,
           TestatScreenshot3.src,
-          TestatScreenshot4.src,
         ]
       },
     ],
     seeMoreButtonText: "See More On Figma",
     seeMoreButtonIcon: "chevron-forward-outline",
+    seeMoreButtonLink: "https://www.figma.com/team_invite/redeem/DhgR09RNVpELww9F8TkNLz"
   },
 }
 

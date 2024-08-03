@@ -113,7 +113,7 @@ const Navbar = () => {
             <li className={styles.link}><Link onClick={closeMenu} typography="body-2" href="/#skills">Skills</Link></li>
             <li className={styles.link}><Link onClick={closeMenu} typography="body-2" href="/#projects">Projects</Link></li>
             <li className={styles.link}><Link onClick={closeMenu} typography="body-2" href="/#designs">Designs</Link></li>
-            {/* <li className={styles.link}><Link onClick={closeMenu} typography="body-2" href="/blog/">Blog</Link></li> */}
+            <li className={styles.link}><Link onClick={closeMenu} typography="body-2" href="/blog/">Blog</Link></li>
             <li className={styles.link}><Link onClick={closeMenu} typography="body-2" href="/#contact">Contact Me</Link></li>
           </ul>
         </div>

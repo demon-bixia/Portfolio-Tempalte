@@ -2,11 +2,11 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  min-width: 350px;
-  padding: 16px;
-  margin: 16px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
+  min-width: 21.875rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid var(--border);
   display: grid;
   grid-template-columns: 1fr min-content;
   justify-content: space-between;
@@ -23,14 +23,14 @@
 }
 
 .snackbar .icon svg {
-  width: 16px;
+  width: 1rem;
 }
 
 
 /***** Mobile *****/
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 47.9375rem) {
   .snackbar {
-    min-width: 250px;
+    min-width: 15.625rem;
   }
 }

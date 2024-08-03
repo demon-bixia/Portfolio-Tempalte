@@ -1,6 +1,6 @@
 .hero {
-  padding: 50px 32px;
-  height: calc(100vh - 183px);
+  padding: 3.125rem 2rem;
+  height: calc(100vh - 11.4375rem);
   display: grid;
   grid-template-rows: repeat(2, min-content);
   place-items: center;
@@ -8,10 +8,10 @@
 }
 
 .hero .welcome {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .hero .welcome h1 {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }

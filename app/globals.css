@@ -39,23 +39,23 @@
 
   /* Types */
 
-  --heading-1: 300 54px/73px "Noto Sans", sans-serif;
-  --heading-2: 300 42px/57px "Noto Sans", sans-serif;
-  --heading-3: 300 32px/43px "Noto Sans", sans-serif;
-  --heading-4: 400 28px/38px "Noto Sans", sans-serif;
-  --heading-5: 400 20px/27px "Noto Sans", sans-serif;
-  --heading-6: 600 14px/19px "Noto Sans", sans-serif;
-  --heading-7: 600 12px/16px "Noto Sans", sans-serif;
+  --heading-1: 300 3.375rem/4.5625rem "Noto Sans", sans-serif;
+  --heading-2: 300 2.625rem/3.5625rem "Noto Sans", sans-serif;
+  --heading-3: 300 2rem/2.6875rem "Noto Sans", sans-serif;
+  --heading-4: 400 1.75rem/2.375rem "Noto Sans", sans-serif;
+  --heading-5: 400 1.25rem/1.6875rem "Noto Sans", sans-serif;
+  --heading-6: 600 0.875rem/1.1875rem "Noto Sans", sans-serif;
+  --heading-7: 600 0.75rem/1rem "Noto Sans", sans-serif;
 
-  --body-1: 400 18px/24px "Noto Sans", sans-serif;
-  --body-2: 400 16px/21px "Noto Sans", sans-serif;
-  --body-3: 400 14px/19px "Noto Sans", sans-serif;
-  --body-4: 400 12px/16px "Noto Sans", sans-serif;
-  --body-5: 400 10px/13px "Noto Sans", sans-serif;
+  --body-1: 400 1.125rem/1.5rem "Noto Sans", sans-serif;
+  --body-2: 400 1rem/1.3125rem "Noto Sans", sans-serif;
+  --body-3: 400 0.875rem/1.1875rem "Noto Sans", sans-serif;
+  --body-4: 400 0.75rem/1rem "Noto Sans", sans-serif;
+  --body-5: 400 0.625rem/0.8125rem "Noto Sans", sans-serif;
 
-  --display-1: 900 45px/61px "Noto Sans", sans-serif;
-  --display-2: 900 30px/40px "Noto Sans", sans-serif;
-  --display-3: 900 20px/27px "Noto Sans", sans-serif;
+  --display-1: 900 2.8125rem/3.8125rem "Noto Sans", sans-serif;
+  --display-2: 900 1.875rem/2.5rem "Noto Sans", sans-serif;
+  --display-3: 900 1.25rem/1.6875rem "Noto Sans", sans-serif;
 }
 
 
@@ -67,7 +67,7 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 199.39px);
+  min-height: calc(100vh - 12.4619rem);
 }
 
 
@@ -78,14 +78,14 @@ main {
 
 /***** Desktop *****/
 
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 62rem) {}
 
 
 /***** Tablet *****/
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {}
+@media only screen and (min-width: 48rem) and (max-width: 61.9375rem) {}
 
 
 /***** Mobile *****/
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 47.9375rem) {}

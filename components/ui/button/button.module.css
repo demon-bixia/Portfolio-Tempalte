@@ -3,12 +3,11 @@
 .button {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, auto));
-
     justify-content: center;
     align-items: center;
-    padding: 12px;
-    border: 1px solid;
-    border-radius: 5px;
+    padding: 0.75rem;
+    border: 0.0625rem solid;
+    border-radius: 0.3125rem;
     cursor: pointer;
     outline: none;
     box-sizing: border-box;
@@ -27,24 +26,24 @@
 
 .contained.primary {
     background-color: var(--blue-200);
-    border: 1px solid var(--blue-200);
+    border: 0.0625rem solid var(--blue-200);
     color: var(--white);
 }
 
 .contained.primary:hover {
     background-color: var(--blue-300);
-    border: 1px solid var(--blue-300);
+    border: 0.0625rem solid var(--blue-300);
 }
 
 .contained.primary:focus {
     background-color: var(--blue-300);
-    border: 1px solid var(--blue-300);
+    border: 0.0625rem solid var(--blue-300);
 }
 
 .contained.primary:active {
     background-color: var(--blue-300);
-    border: 1px solid var(--blue-300);
-    box-shadow: 0 0 0 4px var(--blue-100);
+    border: 0.0625rem solid var(--blue-300);
+    box-shadow: 0 0 0 0.25rem var(--blue-100);
 }
 
 
@@ -52,24 +51,24 @@
 
 .contained.gray {
     background-color: var(--gray-700);
-    border: 1px solid var(--gray-700);
+    border: 0.0625rem solid var(--gray-700);
     color: var(--white);
 }
 
 .contained.gray:hover {
     background-color: var(--gray-700);
-    border: 1px solid var(--gray-700);
+    border: 0.0625rem solid var(--gray-700);
 }
 
 .contained.gray:focus {
     background-color: var(--gray-700);
-    border: 1px solid var(--gray-700);
+    border: 0.0625rem solid var(--gray-700);
 }
 
 .contained.gray:active {
     background-color: var(--gray-700);
-    border: 1px solid var(--gray-700);
-    box-shadow: 0 0 0 3px var(--gray-200);
+    border: 0.0625rem solid var(--gray-700);
+    box-shadow: 0 0 0 0.2188rem var(--gray-200);
 }
 
 
@@ -77,24 +76,24 @@
 
 .contained.white {
     background-color: var(--white);
-    border: 1px solid var(--white);
+    border: 0.0625rem solid var(--white);
     color: var(--gray-700);
 }
 
 .contained.white:hover {
     background-color: var(--white);
-    border: 1px solid var(--white);
+    border: 0.0625rem solid var(--white);
 }
 
 .contained.white:focus {
     background-color: var(--white);
-    border: 1px solid var(--white);
+    border: 0.0625rem solid var(--white);
 }
 
 .contained.white:active {
     background-color: var(--white);
-    border: 1px solid var(--white);
-    box-shadow: 0 0 0 3px var(--white);
+    border: 0.0625rem solid var(--white);
+    box-shadow: 0 0 0 0.1875rem var(--white);
 }
 
 
@@ -109,7 +108,7 @@
 /***** Outlined Primary *****/
 
 .outlined.primary {
-    border: 1px solid var(--blue-200);
+    border: 0.0625rem solid var(--blue-200);
     color: var(--blue-200);
 }
 
@@ -133,7 +132,7 @@
 /***** Outlined Gray *****/
 
 .outlined.gray {
-    border: 1px solid var(--gray-700);
+    border: 0.0625rem solid var(--gray-700);
     color: var(--gray-700);
 }
 
@@ -156,7 +155,7 @@
 /***** Outlined White *****/
 
 .outlined.white {
-    border: 1px solid var(--white);
+    border: 0.0625rem solid var(--white);
     color: var(--white);
 }
 
@@ -181,7 +180,7 @@
 
 .ghost {
     background-color: var(--transparent);
-    border: 1px solid var(--transparent);
+    border: 0.0625rem solid var(--transparent);
     transition: border-color 400ms, background-color 400ms, color 300ms;
 }
 
@@ -215,5 +214,6 @@
 /***** End Adornment Container *****/
 
 .endAdornmentContainer {
-    margin-left: 5px;
+    margin-left: 0.5rem;
+    margin-top: 0.0625rem;
 }

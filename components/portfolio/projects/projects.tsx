@@ -36,6 +36,7 @@ interface IProps {
     description: string;
     seeMoreButtonText: string;
     seeMoreButtonIcon: any;
+    seeMoreButtonLink: string;
     projects: IProject[];
   };
 }
@@ -92,7 +93,7 @@ const Projects = ({ id, data }: IProps) => {
           <div className={styles.descriptionWrapper}>
             <div className={styles.description}>
               <Typography className={styles.header} variant="heading-5">{data.title}</Typography>
-              <Typography className={styles.text} variant="body-4">{data.description}</Typography>
+              <Typography className={styles.text} variant="body-3">{data.description}</Typography>
             </div>
             <div className={styles.underline}></div>
           </div>
@@ -147,6 +148,8 @@ const Projects = ({ id, data }: IProps) => {
           <Button
             variant="outlined"
             className={styles.seeMoreButton}
+            target="_blank"
+            href={data.seeMoreButtonLink}
             endAdornment={<IonIcon className={styles.icon} name={data.seeMoreButtonIcon} />}
           >
             {data.seeMoreButtonText}

@@ -31,16 +31,17 @@ const ContactForm = () => {
   const handleFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
-      await fetch("https://api.slapform.com/tmlKbU5xA", {
+      fetch("https://api.slapform.com/w4meBnXPQ", {
         method: "POST",
         headers: { "Content-Type": "application/json", },
         body: JSON.stringify({
           name: name,
           email_address: email,
           message: message,
-          slap_replyto: "msmainacco0unt@gmail.com"
+          slap_replyto: "msbizzacc0unt@outlook.com"
         })
       });
+      setName(''); setEmail(''); setMessage('');
       setStatus("success");
     } catch {
       setStatus("failure")

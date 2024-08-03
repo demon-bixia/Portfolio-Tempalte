@@ -1,7 +1,7 @@
 .articles {
   display: grid;
-  row-gap: 50px;
-  padding: 100px 32px;
+  row-gap: 3.125rem;
+  padding: 6.25rem 5rem;
 }
 
 .articles .topSection {
@@ -11,21 +11,18 @@
   align-items: center;
 }
 
-.articles .topSection .searchInput {
-  background-color: var(--transparent) !important;
-}
 
 .articles .articlesList {
   display: grid;
-  row-gap: 32px;
+  row-gap: 2rem;
 }
 
 .articles .articlesList .newestArticle {
-  height: 550px;
+  height: 34.375rem;
 }
 
 .articles .articlesList .newestArticle a {
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 .articles .articlesList .newestArticle p:nth-child(1) {
@@ -43,17 +40,17 @@
 .articles .articlesList .articlesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 32px;
-  column-gap: 32px;
+  row-gap: 2rem;
+  column-gap: 2rem;
 }
 
 
 /***** Mobile *****/
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 47.9375rem) {
   .articles .topSection {
     grid-template-columns: 1fr;
-    row-gap: 32px;
+    row-gap: 2rem;
   }
 
   .articles .topSection .title {
@@ -61,11 +58,11 @@
   }
 
   .articles .articlesList .newestArticle {
-    height: 250px;
+    height: 15.625rem;
   }
 
   .articles .articlesList .newestArticle a {
-    padding: 16px;
+    padding: 1rem;
   }
 
   .articles .articlesList .newestArticle p:nth-child(1) {

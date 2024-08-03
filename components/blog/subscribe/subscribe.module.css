@@ -1,17 +1,22 @@
 .container {
-  width: 484px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  width: 30.25rem;
+  border: 0.0625rem solid var(--border);
+  border-radius: 0.625rem;
   display: grid;
   grid-template-columns: 1fr auto;
-  column-gap: 12px;
+  column-gap: 0.75rem;
   background: var(--white);
+  transition: all 200ms ease;
+}
+
+.activeContainer {
+  border: 0.0625rem solid var(--blue-200) !important;
 }
 
 .container .emailInput {
   width: 100%;
   height: 100%;
-  padding: 0 0 0 12px;
+  padding: 0 0 0 0.75rem;
   background-color: var(--transparent);
   border: none;
 }
@@ -22,18 +27,18 @@
 }
 
 .container .subscribeButtonWrapper {
-  padding: 7px 8px;
+  padding: 0.4375rem 0.5rem;
 }
 
 .container .subscribeButtonWrapper .subscribeButton {
-  width: 105px;
-  height: 40px;
-  border-radius: 10px;
+  width: 6.5625rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
 }
 
 /***** Mobile *****/
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 47.9375rem) {
   .container {
     width: 100%;
   }

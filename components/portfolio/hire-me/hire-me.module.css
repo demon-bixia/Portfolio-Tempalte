@@ -4,14 +4,14 @@
 }
 
 .buttonGroup .button {
-  min-width: 100px;
+  min-width: 6.25rem;
 }
 
 .buttonGroup .button:first-child {
-  margin-right: 12px;
+  margin-right: 0.75rem;
 }
 
 .buttonGroup .button .openIcon svg {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
 }

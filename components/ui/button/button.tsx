@@ -1,9 +1,11 @@
 import type { TTypographyVariants } from "@/components/ui/typography/typography";
-import { chooseTypography } from "@/components/ui/typography/typography";
+
 import React from "react";
-import styles from "./button.module.css";
+import { chooseTypography } from "@/components/ui/typography/typography";
+
 import NextLink from "next/link";
 
+import styles from "./button.module.css";
 
 // **** Types **** //
 

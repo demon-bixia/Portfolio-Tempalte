@@ -1,8 +1,9 @@
 "use client"
 
-import articlesData from "@/data/articles";
-import { useEffect, useState } from "react";
 import type { IArticle } from "@/types/interfaces";
+
+import { useEffect, useState } from "react";
+import articlesData from "@/data/articles";
 
 import ArticleCard from "@/components/blog/article-card/article-card";
 import Pagination from "@/components/ui/pagination/pagination";
@@ -77,7 +78,7 @@ const Articles = () => {
                   {filteredArticles.slice(1).map((article) => (
                     <ArticleCard
                       article={article}
-                      key={article.id}
+                      key={article.url}
                     />
                   ))}
                 </div>
