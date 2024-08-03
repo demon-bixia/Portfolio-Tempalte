@@ -48,6 +48,10 @@
 /***** Mobile *****/
 
 @media only screen and (max-width: 47.9375rem) {
+  .articles {
+    padding: 2rem 1.5rem;
+  }
+
   .articles .topSection {
     grid-template-columns: 1fr;
     row-gap: 2rem;

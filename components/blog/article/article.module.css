@@ -6,8 +6,9 @@
   margin-bottom: 1rem;
 }
 
+
 .article .commentsTitle {
-  margin: 4rem 0 1rem 0;
+  margin: 4rem 0 2rem 0;
 }
 
 .article .date {
@@ -37,7 +38,15 @@
 /***** Mobile *****/
 
 @media only screen and (max-width: 47.9375rem) {
+  .article {
+    padding: 2rem 1.5rem;
+  }
+
   .article .cover {
     height: 15.625rem;
+  }
+
+  .article .commentsTitle {
+    margin: 5rem 0 4rem 0;
   }
 }
