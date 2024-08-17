@@ -5,21 +5,34 @@ import PortfolioThumbnail from "@/public/images/projects/portfolio/thumbnail.png
 import ThoughtlessThumbnail from "@/public/images/projects/thoughtless/thumbnail.png";
 import WE2EEThumbnail from "@/public/images/projects/WE2EE/thumbnail.png";
 
-import AvianDesignThumbnail from "@/public/images/designs/neos/thumbnail.png";
-import TestatThumbnail from "@/public/images/designs/testat/thumbnail.png";
-import TheFrontierThumbnail from "@/public/images/designs/the-frontier/thumbnail.png";
 
+import NeosDesignThumbnail from "@/public/images/designs/neos/thumbnail.png";
 import NeosScreenshot1 from "@/public/images/designs/neos/screenshots/Landing.png";
 import NeosScreenshot2 from "@/public/images/designs/neos/screenshots/Posts.png";
 import NeosScreenshot3 from "@/public/images/designs/neos/screenshots/Post.png";
 
+import TestatThumbnail from "@/public/images/designs/testat/thumbnail.png";
 import TestatScreenshot1 from "@/public/images/designs/testat/screenshots/landing-page.jpg";
 import TestatScreenshot2 from "@/public/images/designs/testat/screenshots/student-course-dashboard.jpg";
 import TestatScreenshot3 from "@/public/images/designs/testat/screenshots/student-dashboard.png";
 
+import TheFrontierThumbnail from "@/public/images/designs/the-frontier/thumbnail.png";
 import TheFrontierScreenshots1 from "@/public/images/designs/the-frontier/screenshots/Article.png";
 import TheFrontierScreenshots2 from "@/public/images/designs/the-frontier/screenshots/Stories.png";
 import TheFrontierScreenshots3 from "@/public/images/designs/the-frontier/screenshots/Write.png";
+
+import LawyerThemeThumbnail from '@/public/images/designs/lawyer-theme/thumbnail.png';
+import LawyerThemeScreenshots1 from '@/public/images/designs/lawyer-theme/screenshots/Home.png';
+
+import AvianDesignThumbnail from '@/public/images/designs/avian-design/thumbnail.png';
+import AvianDesignScreenshots1 from '@/public/images/designs/avian-design/screenshots/Calls.png';
+import AvianDesignScreenshots2 from '@/public/images/designs/avian-design/screenshots/Conversations.png';
+import AvianDesignScreenshots3 from '@/public/images/designs/avian-design/screenshots/Stories.png';
+
+import BoltDesignThumbnail from '@/public/images/designs/bolt-design/thumbnail.png';
+import BoltDesignScreenshots1 from '@/public/images/designs/bolt-design/screenshots/Login.png';
+import BoltDesignScreenshots2 from '@/public/images/designs/bolt-design/screenshots/Form.png';
+import BoltDesignScreenshots3 from '@/public/images/designs/bolt-design/screenshots/Changelist.png';
 
 
 // **** Variables **** //
@@ -106,7 +119,7 @@ const projects = {
     projects: [
       {
         id: "neos",
-        thumbnail: AvianDesignThumbnail,
+        thumbnail: NeosDesignThumbnail,
         thumbnailAlt: "Neos figma project thumbnail",
         demonLinkText: "View Shots",
         demoLinkIcon: "images-outline",
@@ -117,6 +130,21 @@ const projects = {
           NeosScreenshot1.src,
           NeosScreenshot2.src,
           NeosScreenshot3.src,
+        ]
+      },
+      {
+        id: "testat",
+        thumbnail: TestatThumbnail,
+        thumbnailAlt: "Testat figma project thumbnail",
+        demonLinkText: "View Shots",
+        demoLinkIcon: "images-outline",
+        projectLink: "https://www.figma.com/file/kiUsNKC9jTm4fvWuqCAzD5/Testat-online-learning-site?type=design&t=6bWSlEgSMFB1LklL-6",
+        projectLinkText: "Figma",
+        projectLinkIcon: "logo-figma",
+        screenshots: [
+          TestatScreenshot1.src,
+          TestatScreenshot2.src,
+          TestatScreenshot3.src,
         ]
       },
       {
@@ -135,18 +163,46 @@ const projects = {
         ]
       },
       {
-        id: "testat",
-        thumbnail: TestatThumbnail,
-        thumbnailAlt: "Testat figma project thumbnail",
+        id: "LawyerTheme",
+        thumbnail: LawyerThemeThumbnail,
+        thumbnailAlt: "LawyerTheme figma project thumbnail",
         demonLinkText: "View Shots",
         demoLinkIcon: "images-outline",
-        projectLink: "https://www.figma.com/file/kiUsNKC9jTm4fvWuqCAzD5/Testat-online-learning-site?type=design&t=6bWSlEgSMFB1LklL-6",
+        projectLink: "https://www.figma.com/design/SKhlWEm0UMwhJEtJlGvf4h/Lawyer-Firm-Theme?node-id=5-2&t=ldZ53ylxzLu9NP9F-0",
         projectLinkText: "Figma",
         projectLinkIcon: "logo-figma",
         screenshots: [
-          TestatScreenshot1.src,
-          TestatScreenshot2.src,
-          TestatScreenshot3.src,
+          LawyerThemeScreenshots1.src
+        ]
+      },
+      {
+        id: "BoltDesign",
+        thumbnail: BoltDesignThumbnail,
+        thumbnailAlt: "Bolt admin figma project thumbnail",
+        demonLinkText: "View Shots",
+        demoLinkIcon: "images-outline",
+        projectLink: "https://www.figma.com/design/SKhlWEm0UMwhJEtJlGvf4h/Lawyer-Firm-Theme?node-id=5-2&t=ldZ53ylxzLu9NP9F-0",
+        projectLinkText: "Figma",
+        projectLinkIcon: "logo-figma",
+        screenshots: [
+          BoltDesignScreenshots1.src,
+          BoltDesignScreenshots2.src,
+          BoltDesignScreenshots3.src,
+        ]
+      },
+      {
+        id: "AvianDesign",
+        thumbnail: AvianDesignThumbnail,
+        thumbnailAlt: "Avian template figma project thumbnail",
+        demonLinkText: "View Shots",
+        demoLinkIcon: "images-outline",
+        projectLink: "https://www.figma.com/design/SKhlWEm0UMwhJEtJlGvf4h/Lawyer-Firm-Theme?node-id=5-2&t=ldZ53ylxzLu9NP9F-0",
+        projectLinkText: "Figma",
+        projectLinkIcon: "logo-figma",
+        screenshots: [
+          AvianDesignScreenshots1.src,
+          AvianDesignScreenshots2.src,
+          AvianDesignScreenshots3.src,
         ]
       },
     ],
