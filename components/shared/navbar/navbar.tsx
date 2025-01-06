@@ -120,7 +120,7 @@ const Navbar = () => {
 
         <div>
           <Button className={styles.contactButton} variant="outlined" color="gray" href="/#contact">
-            Contact Me
+            Let's Chat
           </Button>
 
           <Button

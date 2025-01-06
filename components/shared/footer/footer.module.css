@@ -5,7 +5,7 @@
 
 .footer .grid {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   align-items: center;
 }
@@ -18,9 +18,14 @@
   width: 9.375rem;
   padding: 0;
   list-style-type: none;
+  justify-self: end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0.0625rem, 1fr));
   justify-content: space-between;
+}
+
+.footer .copyright {
+  justify-self: center;
 }
 
 .footer .socialLinks .item:not(:last-child) {
@@ -40,6 +45,11 @@
 /***** Mobile *****/
 
 @media only screen and (max-width: 47.9375rem) {
+  .footer .grid {
+    grid-template-columns: 1fr;
+
+  }
+
   .footer .socialLinks {
     display: none;
   }

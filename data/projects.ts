@@ -206,9 +206,9 @@ const projects = {
         ]
       },
     ],
-    seeMoreButtonText: "See More On Figma",
+    seeMoreButtonText: "See More On Dribble",
     seeMoreButtonIcon: "chevron-forward-outline",
-    seeMoreButtonLink: "https://www.figma.com/team_invite/redeem/DhgR09RNVpELww9F8TkNLz"
+    seeMoreButtonLink: "https://dribbble.com/demon-bixia"
   },
 }
 

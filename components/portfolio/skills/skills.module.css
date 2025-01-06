@@ -7,7 +7,7 @@
 }
 
 .outerGrid .description {
-  max-width: 10.625rem;
+  max-width: 12.625rem;
 }
 
 .outerGrid .descriptionWrapper .description .header {
@@ -38,6 +38,7 @@
 .outerGrid .innerGrid .item .icon {
   color: var(--blue-200);
   margin-bottom: 2rem;
+  width: auto !important; 
 }
 
 .outerGrid .innerGrid .item .icon svg {

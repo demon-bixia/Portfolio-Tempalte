@@ -33,7 +33,7 @@ const Footer = ({ data }: IProps) => {
           <Image className={styles.logo} src={MyLogo} alt="MS Logo" />
         </div>
 
-        <div>
+        <div className={styles.copyright}>
           <Typography className={styles.copyright} variant="body-4">{data.copyright}</Typography>
         </div>
 

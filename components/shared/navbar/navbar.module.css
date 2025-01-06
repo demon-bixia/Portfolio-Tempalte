@@ -9,9 +9,9 @@
   box-sizing: border-box;
   border-bottom: 0.0625rem solid var(--border);
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  justify-content: space-between;
+  justify-content: stretch;
 }
 
 .navbar.fixed {
@@ -40,6 +40,7 @@
   margin: 0;
   padding: 0;
   display: grid;
+  justify-self: center;
   grid-template-columns: repeat(5, auto);
   place-items: center;
   place-content: center;
@@ -52,6 +53,10 @@
 
 .navbar .linksWrapper .links .link:last-child {
   display: none;
+}
+
+.navbar .contactButton {
+  justify-self: end;
 }
 
 .navbar .openButton {
@@ -85,7 +90,7 @@
     place-items: end;
 
     visibility: visible;
-    backdrop-filter: blur(0.3125rem);
+    backdrop-filter: blur(1.875rem);
     background-color: var(--overlay);
   }
 
@@ -130,6 +135,7 @@
   }
 
   .navbar .openButton {
+    justify-self: end;
     display: grid;
   }
 

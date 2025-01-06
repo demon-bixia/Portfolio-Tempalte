@@ -14,7 +14,7 @@ interface IProps {
 }
 
 
-// **** Component **** //http://' +
+// **** Component **** 
 
 const Article = ({ children, article }: IProps) => {
   const config = { url: window.location.href, identifier: article.url, title: article.title, language: 'en_US' }

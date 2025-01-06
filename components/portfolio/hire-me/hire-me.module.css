@@ -1,14 +1,11 @@
 .buttonGroup {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.75rem;
 }
 
 .buttonGroup .button {
-  min-width: 6.25rem;
-}
-
-.buttonGroup .button:first-child {
-  margin-right: 0.75rem;
+  min-width: 7rem;
 }
 
 .buttonGroup .button .openIcon svg {

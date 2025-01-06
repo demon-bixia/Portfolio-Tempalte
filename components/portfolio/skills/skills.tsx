@@ -28,7 +28,7 @@ const Skills = ({ data }: IProps) => {
         <div className={styles.outerGrid}>
           <div className={styles.descriptionWrapper}>
             <div className={styles.description}>
-              <Typography className={styles.header} variant="heading-5">{data.title}</Typography>
+              <Typography className={styles.header} variant="heading-4">{data.title}</Typography>
               <Typography className={styles.text} variant="body-3">{data.description}</Typography>
             </div>
             <div className={styles.underline}></div>
